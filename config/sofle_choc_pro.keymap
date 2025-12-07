@@ -22,16 +22,71 @@
         compatible = "zmk,conditional-layers";
 
         adjust_layer {
-            if-layers = <LOWER RAISE>;
-            then-layer = <ADJUST>;
+            if-layers = <3 4>;
+            then-layer = <5>;
+        };
+    };
+
+    macros {
+        uml_u: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(RG(U)) &kp U>;
+            label = "NEW_MACRO";
+        };
+
+        lang_ua: lang_select {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CAPS &tog 2>;
+            label = "LANG_SELECT";
+        };
+
+        lang_eng: lang_select_eng {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CAPS &tog 0>;
+            label = "LANG_SELECT_ENG";
+        };
+
+        uml_o: uml_o {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(RG(U)) &kp O>;
+            label = "UML_O";
+        };
+
+        uml_U: uml_U {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(RG(U)) &kp LS(U)>;
+            label = "UML_U";
+        };
+
+        uml_O: uml_O {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(RG(U)) &kp RS(O)>;
+            label = "UML_O";
+        };
+    };
+
+    behaviors {
+        behabiour_uml_u: behabiour_uml_u {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ü";
+            bindings = <&behabiour_uml_u>, <&uml_U>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            display-name = "default";
+        eng_main {
+            display-name = "eng_main";
 
             // ------------------------------------------------------------------------------------------------------------
             // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
@@ -41,11 +96,31 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESC    &kp N1  &kp N2            &kp N3    &kp N4    &kp N5                             &kp N6     &kp N7    &kp N8     &kp N9             &kp N0    &kp GRAVE
-&kp TAB    &kp Q   &kp W             &kp E     &kp R     &kp T      &kp Y                              &kp U     &kp I      &kp O              &kp P     &kp BSPC
-&kp CAPS   &kp A   &kp S             &kp D     &kp F     &kp G      &kp H                              &kp J     &kp K      &kp L              &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X             &kp C     &kp V     &kp B      &kp C_MUTE  &kp C_PLAY  &kp N      &kp M     &kp COMMA  &kp DOT            &kp FSLH  &kp RSHFT
-                   &kp LEFT_CONTROL  &kp LALT  &kp LGUI  &mo LOWER  &kp RET     &kp SPACE   &mo RAISE  &kp RGUI  &kp RALT   &kp RIGHT_CONTROL
+&kp ESC    &kp N1  &kp N2            &kp N3      &kp N4    &kp N5                      &kp N6  &kp N7    &kp N8     &kp N9             &kp N0    &kp GRAVE
+&kp TAB    &kp Q   &kp W             &kp E       &kp R     &kp T   &kp Y                       &kp U     &kp I      &kp O              &kp P     &kp LEFT_BRACKET
+&lang_ua   &kp A   &kp S             &kp D       &kp F     &kp G   &kp H                       &kp J     &kp K      &kp L              &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z   &kp X             &kp C       &kp V     &kp B   &none    &none      &kp N   &kp M     &kp COMMA  &kp DOT            &kp FSLH  &kp RSHFT
+                   &kp LEFT_CONTROL  &lt 1 LALT  &kp LGUI  &mo 3   &kp RET  &kp SPACE  &mo 4   &kp RGUI  &kp RALT   &kp RIGHT_CONTROL
+            >;
+        };
+
+        eng_bonus {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans            &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                  &behabiour_uml_u  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                  &trans            &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans
+            >;
+        };
+
+        ua_main {
+            bindings = <
+&kp ESC    &kp N1  &kp N2     &kp N3    &kp N4    &kp N5                        &kp N6  &kp N7    &kp N8     &kp N9     &kp N0    &kp GRAVE
+&kp TAB    &kp Q   &kp W      &kp E     &kp R     &kp T   &kp Y                         &kp U     &kp I      &kp O      &kp P     &kp LBKT
+&lang_eng  &kp A   &kp S      &kp D     &kp F     &kp G   &kp H                         &kp J     &kp K      &kp L      &kp SEMI  &kp APOS
+&kp LSHFT  &kp Z   &kp X      &kp C     &kp V     &kp B   &none      &none      &kp N   &kp M     &kp COMMA  &kp DOT    &kp FSLH  &kp RSHFT
+                   &kp LCTRL  &kp LALT  &kp LGUI  &none   &kp ENTER  &kp SPACE  &none   &kp RGUI  &kp RALT   &kp RCTRL
             >;
         };
 
