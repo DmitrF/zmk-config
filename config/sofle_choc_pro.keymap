@@ -31,7 +31,7 @@
         uml_u_small: uml_u_small {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(RG(U)) &kp U>;
+            bindings = <&kp LA(U) &kp U>;
             label = "uml_u_small";
         };
 
@@ -52,21 +52,21 @@
         uml_o_small: uml_o_small {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(RG(U)) &kp O>;
+            bindings = <&kp LA(U) &kp O>;
             label = "uml_o_small";
         };
 
         uml_u_gross: uml_u_gross {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(RG(U)) &kp LS(U)>;
+            bindings = <&kp LA(U) &kp LS(U)>;
             label = "uml_u_gross";
         };
 
         uml_o_gross: uml_o_gross {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(RG(U)) &kp RS(O)>;
+            bindings = <&kp LA(U) &kp RS(O)>;
             label = "uml_o_gross";
         };
     };
