@@ -28,7 +28,7 @@
     };
 
     macros {
-        uml_u: new_macro {
+        uml_u_small: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LA(RG(U)) &kp U>;
@@ -49,21 +49,21 @@
             label = "LANG_SELECT_ENG";
         };
 
-        uml_o: uml_o {
+        uml_o_small: uml_o {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LA(RG(U)) &kp O>;
             label = "UML_O";
         };
 
-        uml_U: uml_U {
+        uml_u_gross: uml_U {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LA(RG(U)) &kp LS(U)>;
             label = "UML_U";
         };
 
-        uml_O: uml_O {
+        uml_o_gross: uml_O {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LA(RG(U)) &kp RS(O)>;
@@ -72,10 +72,10 @@
     };
 
     behaviors {
-        behabiour_uml_u: behabiour_uml_u {
+        behavior_uml_u: behavior_uml_u {
             compatible = "zmk,behavior-mod-morph";
             label = "ü";
-            bindings = <&behabiour_uml_u>, <&uml_U>;
+            bindings = <&behavior_uml_u>, <&uml_u_gross>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
@@ -106,11 +106,11 @@
 
         eng_bonus {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans            &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                  &behabiour_uml_u  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                  &trans            &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans           &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                  &behavior_uml_u  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                  &trans           &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans  &trans
             >;
         };
 
