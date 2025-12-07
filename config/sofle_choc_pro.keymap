@@ -28,11 +28,11 @@
     };
 
     macros {
-        uml_u_small: new_macro {
+        uml_u_small: uml_u_small {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LA(RG(U)) &kp U>;
-            label = "NEW_MACRO";
+            label = "uml_u_small";
         };
 
         lang_ua: lang_select {
@@ -49,25 +49,25 @@
             label = "LANG_SELECT_ENG";
         };
 
-        uml_o_small: uml_o {
+        uml_o_small: uml_o_small {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LA(RG(U)) &kp O>;
-            label = "UML_O";
+            label = "uml_o_small";
         };
 
-        uml_u_gross: uml_U {
+        uml_u_gross: uml_u_gross {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LA(RG(U)) &kp LS(U)>;
-            label = "UML_U";
+            label = "uml_u_gross";
         };
 
-        uml_o_gross: uml_O {
+        uml_o_gross: uml_o_gross {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LA(RG(U)) &kp RS(O)>;
-            label = "UML_O";
+            label = "uml_o_gross";
         };
     };
 
@@ -155,7 +155,7 @@
 
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                       &trans  &trans    &trans    &trans     &trans   &trans
-&trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans          &kp PG_UP                  &trans    &kp UP    &trans     &kp N0   &trans
+&trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans          &kp PG_UP                  &trans    &kp UP    &trans     &none    &trans
 &trans      &kp LALT      &kp LCTRL     &kp LSHFT     &trans        &kp CLCK        &kp PG_DN                  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL  &kp BSPC
 &trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &studio_unlock  &trans     &trans  &trans  &trans    &trans    &trans     &trans   &trans
                           &trans        &trans        &trans        &trans          &trans     &trans  &trans  &trans    &trans    &trans
