@@ -78,7 +78,7 @@
             bindings = <&uml_a_small>, <&uml_a_big>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT|MOD_RCTL|MOD_LCTL)>;
         };
 
         uml_o_behavior: uml_o_behavior {
@@ -87,7 +87,7 @@
             bindings = <&uml_o_small>, <&uml_o_big>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
         };
 
         uml_u_behavior: uml_u_behavior {
@@ -96,7 +96,7 @@
             bindings = <&uml_u_small>, <&uml_u_big>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT|MOD_RCTL|MOD_LCTL)>;
         };
 
         u_umlu_behavior: u_umlu_behavior {
