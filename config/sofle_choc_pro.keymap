@@ -73,7 +73,7 @@
         del_line: del_line {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LEFT) &kp LS(LG(RIGHT)) &kp BACKSPACE>;
+            bindings = <&kp LG(LEFT) &kp LS(LG(RIGHT)) &kp BACKSPACE>;
             label = "DEL_LINE";
         };
 
@@ -213,11 +213,11 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&trans          &trans  &trans            &trans              &trans             &trans                            &trans  &trans              &trans    &trans         &trans     &trans
-&trans          &trans  &kp LS(LG(HOME))  &kp LS(UP)          &kp LS(LG(END))    &trans  &kp DEL                           &kp LG(LEFT)        &kp UP    &kp LG(RIGHT)  &kp PG_UP  &trans
-&trans          &trans  &kp LS(LEFT)      &kp LS(DOWN_ARROW)  &kp LS(RIGHT)      &trans  &kp BACKSPACE                     &kp LEFT            &kp DOWN  &kp RIGHT      &kp PG_DN  &trans
-&kp LEFT_SHIFT  &trans  &kp LS(LA(LEFT))  &select_word        &kp LA(LS(RIGHT))  &trans  &kp LC(O)      &del_line  &trans  &kp LA(LEFT_ARROW)  &trans    &kp LA(RIGHT)  &trans     &kp RIGHT_SHIFT
-                        &trans            &trans              &trans             &trans  &kp LS(ENTER)  &trans     &trans  &trans              &trans    &trans
+&trans          &trans  &trans                  &trans              &trans             &trans                            &trans  &trans              &trans    &trans         &trans     &trans
+&trans          &trans  &kp LS(LG(LEFT_ARROW))  &kp LS(UP)          &kp LS(LG(RIGHT))  &trans  &kp DEL                           &kp LG(LEFT)        &kp UP    &kp LG(RIGHT)  &kp PG_UP  &trans
+&trans          &trans  &kp LS(LEFT)            &kp LS(DOWN_ARROW)  &kp LS(RIGHT)      &trans  &kp BACKSPACE                     &kp LEFT            &kp DOWN  &kp RIGHT      &kp PG_DN  &trans
+&kp LEFT_SHIFT  &trans  &kp LS(LA(LEFT))        &select_word        &kp LA(LS(RIGHT))  &trans  &kp LC(O)      &del_line  &trans  &kp LA(LEFT_ARROW)  &trans    &kp LA(RIGHT)  &trans     &kp RIGHT_SHIFT
+                        &trans                  &trans              &trans             &trans  &kp LS(ENTER)  &trans     &trans  &trans              &trans    &trans
             >;
         };
 
