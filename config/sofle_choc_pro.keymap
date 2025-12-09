@@ -146,12 +146,16 @@
 
         ls_combo {
             bindings = <&kp LSHFT>;
-            key-positions = <27 28>;
+            key-positions = <37 38>;
+            slow-release;
+            layers = <0 4>;
         };
 
         rs_combo {
             bindings = <&kp RSHFT>;
-            key-positions = <31 32>;
+            key-positions = <47 48>;
+            slow-release;
+            layers = <0 4>;
         };
     };
 
