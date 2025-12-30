@@ -87,7 +87,15 @@
         ua_punkt_macro: ua_punkt_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp CAPS &mo 1>, <&macro_pause_for_release>, <&kp CLCK>;
+            bindings =
+                <&kp CAPS>,
+                <&macro_press>,
+                <&mo 1>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 1>,
+                <&macro_tap>,
+                <&kp CLCK>;
 
             label = "UA_PUNKT_MACRO";
         };
