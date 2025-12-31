@@ -190,6 +190,11 @@
             layers = <0 1>;
             timeout-ms = <70>;
         };
+
+        plain_caps {
+            bindings = <&kp CAPS>;
+            key-positions = <0 11>;
+        };
     };
 
     keymap {
