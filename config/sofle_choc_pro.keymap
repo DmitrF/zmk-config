@@ -89,14 +89,14 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&kp CAPS>,
+                <&kp LANG1>,
                 <&macro_press>,
                 <&mo 2>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&mo 2>,
                 <&macro_tap>,
-                <&kp CLCK>;
+                <&kp LANG2>;
 
             label = "UA_PUNKT_MACRO";
         };
@@ -104,14 +104,14 @@
         en_to_ua_macro: en_to_ua_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp CAPSLOCK &to 1>;
+            bindings = <&kp LANG2 &to 1>;
             label = "EN_TO_UA_MACRO";
         };
 
         ua_to_eng_macro: ua_to_end_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp CAPSLOCK &to 0>;
+            bindings = <&kp LANG1 &to 0>;
             label = "UA_TO_END_MACRO";
         };
     };
