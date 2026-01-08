@@ -225,7 +225,7 @@
 &kp ESC           &kp N1  &kp N2     &kp N3    &kp N4    &kp N5                                     &kp N6  &kp N7    &kp N8     &kp N9     &kp N0             &kp GRAVE
 &kp TAB           &kp Q   &kp W      &kp E     &kp R     &kp T            &kp Y                             &kp U     &kp I      &kp O      &kp P              &kp LBKT
 &ua_to_eng_macro  &kp A   &kp S      &kp D     &kp F     &kp G            &kp H                             &kp J     &kp K      &kp L      &kp SEMI           &kp APOS
-&kp LSHFT         &kp Z   &kp X      &kp C     &kp V     &kp B            &kp LS(SLASH)  &kp SLASH  &kp N   &kp M     &kp COMMA  &kp DOT    &kp RIGHT_BRACKET  &kp RSHFT
+&kp LSHFT         &kp Z   &kp X      &kp C     &kp V     &kp B            &kp LS(SLASH)  &kp SLASH  &kp N   &kp M     &kp COMMA  &kp DOT    &kp RIGHT_BRACKET  &kp NON_US_BACKSLASH
                           &kp LCTRL  &kp LALT  &kp LGUI  &ua_punkt_macro  &kp ENTER      &kp SPACE  &mo 3   &kp RGUI  &kp RALT   &kp RCTRL
             >;
         };
@@ -244,7 +244,7 @@
 &kp GRAVE       &kp F1           &kp F2  &kp F3  &kp F4  &kp F5                                   &kp F6    &kp F7             &kp F8                &kp F9                 &kp F10            &kp F11
 &kp TAB         &kp EXCLAMATION  &kp N7  &kp N8  &kp N9  &kp PLUS      &kp LEFT_BRACKET                     &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES  &kp F12
 &kp QUESTION    &kp EQUAL        &kp N4  &kp N5  &kp N6  &kp MINUS     &kp UNDERSCORE                       &kp SEMICOLON      &kp COLON             &kp RA(MINUS)          &kp SQT            &kp NON_US_BACKSLASH
-&kp LEFT_SHIFT  &kp N0           &kp N1  &kp N2  &kp N3  &kp ASTERISK  &kp COMMA         &kp DOT  &kp HASH  &kp BACKSLASH      &kp PIPE              &kp SLASH              &kp ESC            &kp RIGHT_SHIFT
+&kp LEFT_SHIFT  &kp N0           &kp N1  &kp N2  &kp N3  &kp ASTERISK  &kp COMMA         &kp DOT  &kp HASH  &kp BACKSLASH      &kp PIPE              &kp SLASH              &none              &kp RIGHT_SHIFT
                                  &trans  &trans  &trans  &trans        &trans            &trans   &trans    &trans             &trans                &trans
             >;
 
@@ -281,8 +281,8 @@
             display-name = "adjust";
             bindings = <
 &bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                             &kp LANG1  &kp LANG2       &kp LANG3       &none            &kp CAPSLOCK    &to 0
-&ext_power EP_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF  &none                              &mkp MB1        &mmv MOVE_UP    &mkp MB2         &msc SCRL_UP    &none
-&none              &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none            &none                              &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &none
+&ext_power EP_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF  &kp DEL                            &mkp MB1        &mmv MOVE_UP    &mkp MB2         &msc SCRL_UP    &none
+&none              &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none            &kp BACKSPACE                      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &none
 &none              &none            &none            &none            &none            &studio_unlock   &rgb_ug RGB_TOG  &none  &none      &none           &none           &none            &none           &none
                                     &none            &none            &none            &none            &none            &none  &none      &none           &none           &none
             >;
