@@ -216,17 +216,17 @@
 &kp TAB          &kp Q             &kp W             &kp E     &kp R     &kp T   &kp Y                          &u_umlu_behavior  &kp I      &o_umlo_behavior   &kp P              &kp LEFT_BRACKET
 &en_to_ua_macro  &a_umla_behavior  &kp S             &kp D     &kp F     &kp G   &kp H                          &kp J             &kp K      &kp L              &kp SEMI           &kp SQT
 &kp LSHFT        &kp Z             &kp X             &kp C     &kp V     &kp B   &kp COMMA  &kp PERIOD  &kp N   &kp M             &kp COMMA  &kp DOT            &kp RIGHT_BRACKET  &kp RSHFT
-                                   &kp LEFT_CONTROL  &kp LALT  &kp LGUI  &mo 2   &kp RET    &kp SPACE   &mo 3   &kp RIGHT_GUI     &kp RALT   &kp RIGHT_CONTROL
+                                   &kp LEFT_CONTROL  &kp LALT  &kp LGUI  &mo 2   &kp RET    &kp SPACE   &mo 3   &kp LEFT_GUI      &kp RALT   &kp RIGHT_CONTROL
             >;
         };
 
         ua_main {
             bindings = <
-&kp ESC           &kp N1  &kp N2     &kp N3    &kp N4    &kp N5                                     &kp N6  &kp N7    &kp N8     &kp N9     &kp N0             &kp BACKSLASH
-&kp TAB           &kp Q   &kp W      &kp E     &kp R     &kp T            &kp Y                             &kp U     &kp I      &kp O      &kp P              &kp LBKT
-&ua_to_eng_macro  &kp A   &kp S      &kp D     &kp F     &kp G            &kp H                             &kp J     &kp K      &kp L      &kp SEMI           &kp APOS
-&kp LSHFT         &kp Z   &kp X      &kp C     &kp V     &kp B            &kp LS(SLASH)  &kp SLASH  &kp N   &kp M     &kp COMMA  &kp DOT    &kp RIGHT_BRACKET  &kp GRAVE
-                          &kp LCTRL  &kp LALT  &kp LGUI  &ua_punkt_macro  &kp ENTER      &kp SPACE  &mo 3   &kp RGUI  &kp RALT   &kp RCTRL
+&kp ESC           &kp N1  &kp N2     &kp N3    &kp N4    &kp N5                                     &kp N6  &kp N7        &kp N8     &kp N9     &kp N0             &kp BACKSLASH
+&kp TAB           &kp Q   &kp W      &kp E     &kp R     &kp T            &kp Y                             &kp U         &kp I      &kp O      &kp P              &kp LBKT
+&ua_to_eng_macro  &kp A   &kp S      &kp D     &kp F     &kp G            &kp H                             &kp J         &kp K      &kp L      &kp SEMI           &kp APOS
+&kp LSHFT         &kp Z   &kp X      &kp C     &kp V     &kp B            &kp LS(SLASH)  &kp SLASH  &kp N   &kp M         &kp COMMA  &kp DOT    &kp RIGHT_BRACKET  &kp GRAVE
+                          &kp LCTRL  &kp LALT  &kp LGUI  &ua_punkt_macro  &kp ENTER      &kp SPACE  &mo 3   &kp LEFT_GUI  &kp RALT   &kp RCTRL
             >;
         };
 
