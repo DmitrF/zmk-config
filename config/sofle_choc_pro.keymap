@@ -53,7 +53,14 @@
         uml_o_big: uml_o_big {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(U) &kp LS(O)>;
+            bindings =
+                <&macro_release>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp LA(U) &kp LS(O)>,
+                <&macro_press>,
+                <&kp LSHFT>;
+
             label = "UML_O_BIG";
         };
 
@@ -67,7 +74,14 @@
         uml_a_big: uml_a_big {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(U) &kp LS(A)>;
+            bindings =
+                <&macro_release>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp LA(U) &kp LS(A)>,
+                <&macro_press>,
+                <&kp LSHFT>;
+
             label = "UML_A_BIG";
         };
 
