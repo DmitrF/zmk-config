@@ -39,7 +39,14 @@
         uml_u_big: uml_u_big {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(U) &kp LS(U)>;
+            bindings =
+                <&macro_release>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp LA(U) &kp LS(U)>,
+                <&macro_press>,
+                <&kp LSHFT>;
+
             label = "UML_U_BIG";
         };
 
@@ -125,6 +132,7 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
         };
 
         uml_o_behavior: uml_o_behavior {
@@ -133,7 +141,8 @@
             bindings = <&uml_o_small>, <&uml_o_big>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
         };
 
         uml_u_behavior: uml_u_behavior {
@@ -143,6 +152,7 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
         };
 
         u_umlu_behavior: u_umlu_behavior {
