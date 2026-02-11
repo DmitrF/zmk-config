@@ -268,7 +268,7 @@
 &kp GRAVE       &kp F1           &kp F2  &kp F3  &kp F4  &kp F5                                   &kp F6    &kp F7             &kp F8                &kp F9                 &kp F10            &kp F11
 &kp TAB         &kp EXCLAMATION  &kp N7  &kp N8  &kp N9  &kp ASTERISK  &kp LEFT_BRACKET                     &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES  &kp F12
 &kp QUESTION    &kp EQUAL        &kp N4  &kp N5  &kp N6  &kp PLUS      &kp UNDERSCORE                       &kp SEMICOLON      &kp COLON             &kp RA(MINUS)          &kp SQT            &kp NON_US_BACKSLASH
-&kp LEFT_SHIFT  &kp N0           &kp N1  &kp N2  &kp N3  &kp MINUS     &kp COMMA         &kp DOT  &kp HASH  &kp BACKSLASH      &kp PIPE              &kp SLASH              &none              &kp RIGHT_SHIFT
+&kp LEFT_SHIFT  &kp N0           &kp N1  &kp N2  &kp N3  &kp MINUS     &kp COMMA         &kp DOT  &kp HASH  &kp BACKSLASH      &kp PIPE              &kp SLASH              &kp GLOBE          &kp RIGHT_SHIFT
                                  &trans  &trans  &trans  &trans        &trans            &trans   &trans    &trans             &trans                &trans
             >;
 
