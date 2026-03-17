@@ -286,7 +286,7 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&trans          &none  &none                   &none               &none              &none                                &none   &none               &none     &none          &none           &none
+&trans          &none  &none                   &none               &none              &none                                &none   &none               &none     &none          &none           &kp RG(DELETE)
 &trans          &none  &kp LS(LG(LEFT_ARROW))  &kp LS(UP)          &kp LS(LG(RIGHT))  &none      &kp DEL                           &kp LG(LEFT)        &kp UP    &kp LG(RIGHT)  &msc SCRL_UP    &kp PAGE_UP
 &none           &none  &kp LS(LEFT)            &kp LS(DOWN_ARROW)  &kp LS(RIGHT)      &none      &kp BACKSPACE                     &kp LEFT            &kp DOWN  &kp RIGHT      &msc SCRL_DOWN  &kp PG_DN
 &kp LEFT_SHIFT  &none  &kp LS(LA(LEFT))        &select_word        &kp LA(LS(RIGHT))  &kp RG(O)  &kp LC(O)      &del_line  &none   &kp LA(LEFT_ARROW)  &none     &kp LA(RIGHT)  &none           &kp RIGHT_SHIFT
