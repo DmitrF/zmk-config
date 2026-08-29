@@ -304,6 +304,17 @@
 
             display-name = "adjust";
             bindings = <
+&none  &none       &none             &none             &none             &none                                 &kp LANG1  &kp LANG2       &kp LANG3       &none            &kp CAPSLOCK    &to 0
+&none  &none       &kp LS(N7)        &kp LS(N8)        &kp LS(N9)        &none           &kp DEL                          &mkp MB1        &mmv MOVE_UP    &mkp MB2         &msc SCRL_UP    &none
+&none  &none       &kp LS(NUMBER_4)  &kp LS(N5)        &kp LS(NUMBER_6)  &none           &kp BACKSPACE                    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &none
+&none  &kp LS(N0)  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &studio_unlock  &none          &mo 5  &none      &none           &none           &none            &none           &none
+                   &none             &none             &none             &none           &none          &none  &none      &none           &none           &none
+            >;
+        };
+
+        service_layer {
+            display-name = "service";
+            bindings = <
 &bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                             &kp LANG1  &kp LANG2       &kp LANG3       &none            &kp CAPSLOCK    &to 0
 &ext_power EP_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF  &kp DEL                            &mkp MB1        &mmv MOVE_UP    &mkp MB2         &msc SCRL_UP    &none
 &none              &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none            &kp BACKSPACE                      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &none
