@@ -26,11 +26,6 @@
             if-layers = <3 2>;
             then-layer = <4>;
         };
-
-        service {
-            if-layers = <4>;
-            then-layer = <5>;
-        };
     };
 
     macros {
