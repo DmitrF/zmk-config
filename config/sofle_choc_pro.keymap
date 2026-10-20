@@ -26,6 +26,11 @@
             if-layers = <3 2>;
             then-layer = <4>;
         };
+
+        service {
+            if-layers = <4>;
+            then-layer = <5>;
+        };
     };
 
     macros {
@@ -304,11 +309,11 @@
 
             display-name = "adjust";
             bindings = <
-&none  &none       &none             &none             &none             &none                                 &kp LANG1  &kp LANG2       &kp LANG3       &none            &kp CAPSLOCK    &to 0
-&none  &none       &kp LS(N7)        &kp LS(N8)        &kp LS(N9)        &none           &kp DEL                          &mkp MB1        &mmv MOVE_UP    &mkp MB2         &msc SCRL_UP    &none
-&none  &none       &kp LS(NUMBER_4)  &kp LS(N5)        &kp LS(NUMBER_6)  &none           &kp BACKSPACE                    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &none
-&none  &kp LS(N0)  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &studio_unlock  &none          &mo 5  &none      &none           &none           &none            &none           &none
-                   &none             &none             &none             &none           &none          &none  &none      &none           &none           &none
+&none  &none       &none             &none             &none             &none                        &kp LANG1  &kp LANG2       &kp LANG3       &none            &kp CAPSLOCK    &to 0
+&none  &none       &kp LS(N7)        &kp LS(N8)        &kp LS(N9)        &none  &kp DEL                          &mkp MB1        &mmv MOVE_UP    &mkp MB2         &msc SCRL_UP    &none
+&none  &none       &kp LS(NUMBER_4)  &kp LS(N5)        &kp LS(NUMBER_6)  &none  &kp BACKSPACE                    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &none
+&none  &kp LS(N0)  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &none  &none          &mo 5  &none      &none           &none           &none            &none           &none
+                   &none             &none             &none             &none  &none          &none  &none      &none           &none           &none
             >;
         };
 
