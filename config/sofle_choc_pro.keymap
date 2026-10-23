@@ -12,6 +12,7 @@
 #include <dt-bindings/zmk/rgb.h>
 
 // Layer indices; bindings below use the numbers directly
+
 #define ENG 0
 #define UA 1
 #define RU 2
@@ -213,33 +214,33 @@
         eng {
             display-name = "eng";
             bindings = <
-&kp ESC          &kp N1  &kp N2            &kp N3    &kp N4    &kp N5                         &kp N6  &kp N7        &kp N8     &kp N9             &kp N0             &kp GRAVE
-&kp TAB          &kp Q   &kp W             &kp E     &kp R     &kp T   &kp Y                          &kp U         &kp I      &kp O              &kp P              &uml_u_behavior
-&to_ua  &kp A   &kp S             &kp D     &kp F     &kp G   &kp H                          &kp J         &kp K      &kp L              &uml_o_behavior    &uml_a_behavior
-&kp LSHFT        &kp Z   &kp X             &kp C     &kp V     &kp B   &kp COMMA  &kp PERIOD  &kp N   &kp M         &kp COMMA  &kp DOT            &sz_behavior       &kp RSHFT
-                         &kp LEFT_CONTROL  &kp LALT  &kp LGUI  &mo 3   &kp RET    &kp SPACE   &mo 4   &kp LEFT_GUI  &kp RALT   &kp RIGHT_CONTROL
+&kp ESC    &kp N1  &kp N2            &kp N3    &kp N4    &kp N5                         &kp N6  &kp N7         &kp N8     &kp N9             &kp N0           &kp GRAVE
+&kp TAB    &kp Q   &kp W             &kp E     &kp R     &kp T   &kp Y                          &kp U          &kp I      &kp O              &kp P            &uml_u_behavior
+&to_ua     &kp A   &kp S             &kp D     &kp F     &kp G   &kp H                          &kp J          &kp K      &kp L              &uml_o_behavior  &uml_a_behavior
+&kp LSHFT  &kp Z   &kp X             &kp C     &kp V     &kp B   &kp COMMA  &kp PERIOD  &kp N   &kp M          &kp COMMA  &kp DOT            &sz_behavior     &kp RSHFT
+                   &kp LEFT_CONTROL  &kp LALT  &kp LGUI  &mo 3   &kp RET    &kp SPACE   &mo 4   &kp RIGHT_GUI  &kp RALT   &kp RIGHT_CONTROL
             >;
         };
 
         ua {
             display-name = "ua";
             bindings = <
-&kp ESC           &kp N1  &kp N2     &kp N3    &kp N4    &kp N5                                     &kp N6  &kp N7        &kp N8     &kp N9     &kp N0             &kp BACKSLASH
-&kp TAB           &kp Q   &kp W      &kp E     &kp R     &kp T            &kp Y                             &kp U         &kp I      &kp O      &kp P              &kp LBKT
-&to_eng  &kp A   &kp S      &kp D     &kp F     &kp G            &kp H                             &kp J         &kp K      &kp L      &kp SEMI           &kp APOS
-&kp LSHFT         &kp Z   &kp X      &kp C     &kp V     &kp B            &kp LS(SLASH)  &kp SLASH  &kp N   &kp M         &kp COMMA  &kp DOT    &kp RIGHT_BRACKET  &kp GRAVE
-                          &kp LCTRL  &kp LALT  &kp LGUI  &punkt_ua  &kp ENTER      &kp SPACE  &mo 4   &kp LEFT_GUI  &kp RALT   &kp RCTRL
+&kp ESC    &kp N1  &kp N2     &kp N3    &kp N4    &kp N5                               &kp N6  &kp N7    &kp N8     &kp N9     &kp N0             &kp BACKSLASH
+&kp TAB    &kp Q   &kp W      &kp E     &kp R     &kp T      &kp Y                             &kp U     &kp I      &kp O      &kp P              &kp LBKT
+&to_eng    &kp A   &kp S      &kp D     &kp F     &kp G      &kp H                             &kp J     &kp K      &kp L      &kp SEMI           &kp APOS
+&kp LSHFT  &kp Z   &kp X      &kp C     &kp V     &kp B      &kp LS(SLASH)  &kp SLASH  &kp N   &kp M     &kp COMMA  &kp DOT    &kp RIGHT_BRACKET  &kp GRAVE
+                   &kp LCTRL  &kp LALT  &kp LGUI  &punkt_ua  &kp ENTER      &kp SPACE  &mo 4   &kp RGUI  &kp RALT   &kp RCTRL
             >;
         };
 
         ru {
             display-name = "ru";
             bindings = <
-&kp ESC           &kp N1  &kp N2     &kp N3    &kp N4    &kp N5                                     &kp N6  &kp N7        &kp N8     &kp N9     &kp N0             &kp BACKSLASH
-&kp TAB           &kp Q   &kp W      &kp E     &kp R     &kp T            &kp Y                             &kp U         &kp I      &kp O      &kp P              &kp LBKT
-&to_eng  &kp A   &kp S      &kp D     &kp F     &kp G            &kp H                             &kp J         &kp K      &kp L      &kp SEMI           &kp APOS
-&kp LSHFT         &kp Z   &kp X      &kp C     &kp V     &kp B            &kp LS(SLASH)  &kp SLASH  &kp N   &kp M         &kp COMMA  &kp DOT    &kp RIGHT_BRACKET  &kp GRAVE
-                          &kp LCTRL  &kp LALT  &kp LGUI  &punkt_ru  &kp ENTER      &kp SPACE  &mo 4   &kp LEFT_GUI  &kp RALT   &kp RCTRL
+&kp ESC    &kp N1  &kp N2     &kp N3    &kp N4    &kp N5                               &kp N6  &kp N7    &kp N8     &kp N9     &kp N0             &kp BACKSLASH
+&kp TAB    &kp Q   &kp W      &kp E     &kp R     &kp T      &kp Y                             &kp U     &kp I      &kp O      &kp P              &kp LBKT
+&to_eng    &kp A   &kp S      &kp D     &kp F     &kp G      &kp H                             &kp J     &kp K      &kp L      &kp SEMI           &kp APOS
+&kp LSHFT  &kp Z   &kp X      &kp C     &kp V     &kp B      &kp LS(SLASH)  &kp SLASH  &kp N   &kp M     &kp COMMA  &kp DOT    &kp RIGHT_BRACKET  &kp GRAVE
+                   &kp LCTRL  &kp LALT  &kp LGUI  &punkt_ru  &kp ENTER      &kp SPACE  &mo 4   &kp RGUI  &kp RALT   &kp RCTRL
             >;
         };
 
@@ -257,34 +258,33 @@
         nav {
             display-name = "nav";
             bindings = <
-&kp ESC         &kp F1 &kp F2                  &kp F3              &kp F4             &kp F5                            &kp F6  &kp F7              &kp F8    &kp F9         &kp F10         &kp RG(BACKSPACE)
+&kp ESC         &kp F1        &kp F2                  &kp F3              &kp F4             &kp F5                            &kp F6  &kp F7              &kp F8    &kp F9         &kp F10         &kp RG(BACKSPACE)
 &trans          &select_word  &kp LS(LG(LEFT_ARROW))  &kp LS(UP)          &kp LS(LG(RIGHT))  &none   &kp DEL                           &kp LG(LEFT)        &kp UP    &kp LG(RIGHT)  &msc SCRL_UP    &kp PAGE_UP
-&none           &none  &kp LS(LEFT)            &kp LS(DOWN_ARROW)  &kp LS(RIGHT)      &none   &kp BACKSPACE                     &kp LEFT            &kp DOWN  &kp RIGHT      &msc SCRL_DOWN  &kp PG_DN
-&kp LEFT_SHIFT  &none  &kp LS(LA(LEFT))        &none               &kp LA(LS(RIGHT))  &none   &kp LC(O)      &del_line  &none   &kp LA(LEFT_ARROW)  &none     &kp LA(RIGHT)  &none           &kp RIGHT_SHIFT
-                       &trans                  &trans              &trans             &trans  &kp LS(ENTER)  &trans     &trans  &trans              &trans    &trans
+&none           &none         &kp LS(LEFT)            &kp LS(DOWN_ARROW)  &kp LS(RIGHT)      &none   &kp BACKSPACE                     &kp LEFT            &kp DOWN  &kp RIGHT      &msc SCRL_DOWN  &kp PG_DN
+&kp LEFT_SHIFT  &none         &kp LS(LA(LEFT))        &none               &kp LA(LS(RIGHT))  &none   &kp LC(O)      &del_line  &none   &kp LA(LEFT_ARROW)  &none     &kp LA(RIGHT)  &none           &kp RIGHT_SHIFT
+                              &trans                  &trans              &trans             &trans  &kp LS(ENTER)  &trans     &trans  &trans              &trans    &trans
             >;
         };
 
         adjust {
-
             display-name = "adjust";
             bindings = <
-&none  &none       &none             &none             &none             &none                        &to_eng  &to_ua  &to_ru  &none  &kp CAPSLOCK  &to_eng
-&none  &none       &kp LS(N7)        &kp LS(N8)        &kp LS(N9)        &none  &kp DEL                          &mkp MB1        &mmv MOVE_UP    &mkp MB2         &msc SCRL_UP    &none
-&none  &none       &kp LS(NUMBER_4)  &kp LS(N5)        &kp LS(NUMBER_6)  &none  &kp BACKSPACE                    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &none
-&none  &kp LS(N0)  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &none  &none          &mo 6  &none      &none           &none           &none            &none           &none
-                   &none             &none             &none             &none  &none          &none  &none      &none           &none           &none
+&none  &none       &none             &none             &none             &none                        &to_eng  &to_ua          &to_ru          &none            &kp CAPSLOCK    &to_eng
+&none  &none       &kp LS(N7)        &kp LS(N8)        &kp LS(N9)        &none  &kp DEL                        &mkp MB1        &mmv MOVE_UP    &mkp MB2         &msc SCRL_UP    &none
+&none  &none       &kp LS(NUMBER_4)  &kp LS(N5)        &kp LS(NUMBER_6)  &none  &kp BACKSPACE                  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &none
+&none  &kp LS(N0)  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &none  &none          &mo 6  &none    &none           &none           &none            &none           &none
+                   &none             &none             &none             &none  &none          &none  &none    &none           &none           &none
             >;
         };
 
         service {
             display-name = "service";
             bindings = <
-&bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                             &to_eng  &to_ua  &to_ru  &none  &kp CAPSLOCK  &to_eng
-&ext_power EP_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF  &kp DEL                            &mkp MB1        &mmv MOVE_UP    &mkp MB2         &msc SCRL_UP    &none
-&sys_reset         &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none            &kp BACKSPACE                      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &sys_reset
-&bootloader        &none            &none            &none            &none            &none            &rgb_ug RGB_TOG  &none  &none      &none           &none           &none            &none           &bootloader
-                                    &none            &none            &none            &none            &none            &none  &none      &none           &none           &none
+&bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                             &to_eng  &to_ua          &to_ru          &none            &kp CAPSLOCK    &to_eng
+&ext_power EP_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF  &kp DEL                          &mkp MB1        &mmv MOVE_UP    &mkp MB2         &msc SCRL_UP    &none
+&sys_reset         &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none            &kp BACKSPACE                    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &sys_reset
+&bootloader        &none            &none            &none            &none            &none            &rgb_ug RGB_TOG  &none  &none    &none           &none           &none            &none           &bootloader
+                                    &none            &none            &none            &none            &none            &none  &none    &none           &none           &none
             >;
         };
     };
