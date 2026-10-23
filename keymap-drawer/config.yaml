@@ -44,6 +44,9 @@ parse_config:
     "&kp RA(MINUS)": "–"
     "&kp NON_US_BACKSLASH": "§"
     "&kp LC(O)": "⌃O"
+    # firmware
+    "&bootloader": {t: "boot", h: "прошивка"}
+    "&sys_reset": {t: "reset", h: "перезап."}
     # navigation
     "&kp UP": "↑"
     "&kp DOWN": "↓"

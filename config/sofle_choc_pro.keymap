@@ -205,11 +205,6 @@
             layers = <0 1 2>;
             timeout-ms = <70>;
         };
-
-        plain_caps {
-            bindings = <&kp CAPS>;
-            key-positions = <0 11>;
-        };
     };
 
     keymap {
@@ -251,8 +246,8 @@
         punkt {
             display-name = "punkt";
             bindings = <
-&kp GRAVE       &kp F1           &kp F2  &kp F3  &kp F4  &kp F5                                   &kp F6    &kp F7             &kp F8                &kp F9                 &kp F10            &kp F11
-&kp TAB         &kp EXCLAMATION  &kp N7  &kp N8  &kp N9  &kp ASTERISK  &kp LEFT_BRACKET                     &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES  &kp F12
+&kp GRAVE       &none            &none   &none   &none   &none                                    &none     &none              &none                 &none                  &none              &none
+&kp TAB         &kp EXCLAMATION  &kp N7  &kp N8  &kp N9  &kp ASTERISK  &kp LEFT_BRACKET                     &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES  &none
 &kp QUESTION    &kp EQUAL        &kp N4  &kp N5  &kp N6  &kp PLUS      &kp UNDERSCORE                       &kp SEMICOLON      &kp COLON             &kp RA(MINUS)          &kp SQT            &kp NON_US_BACKSLASH
 &kp LEFT_SHIFT  &kp N0           &kp N1  &kp N2  &kp N3  &kp MINUS     &kp COMMA         &kp DOT  &kp HASH  &kp BACKSLASH      &kp PIPE              &kp SLASH              &kp GLOBE          &kp RIGHT_SHIFT
                                  &trans  &trans  &trans  &trans        &trans            &trans   &trans    &trans             &trans                &trans
@@ -262,8 +257,8 @@
         nav {
             display-name = "nav";
             bindings = <
-&trans          &none  &none                   &select_word        &none              &none                             &none   &none               &none     &none          &none           &kp RG(BACKSPACE)
-&trans          &none  &kp LS(LG(LEFT_ARROW))  &kp LS(UP)          &kp LS(LG(RIGHT))  &none   &kp DEL                           &kp LG(LEFT)        &kp UP    &kp LG(RIGHT)  &msc SCRL_UP    &kp PAGE_UP
+&kp ESC         &kp F1 &kp F2                  &kp F3              &kp F4             &kp F5                            &kp F6  &kp F7              &kp F8    &kp F9         &kp F10         &kp RG(BACKSPACE)
+&trans          &select_word  &kp LS(LG(LEFT_ARROW))  &kp LS(UP)          &kp LS(LG(RIGHT))  &none   &kp DEL                           &kp LG(LEFT)        &kp UP    &kp LG(RIGHT)  &msc SCRL_UP    &kp PAGE_UP
 &none           &none  &kp LS(LEFT)            &kp LS(DOWN_ARROW)  &kp LS(RIGHT)      &none   &kp BACKSPACE                     &kp LEFT            &kp DOWN  &kp RIGHT      &msc SCRL_DOWN  &kp PG_DN
 &kp LEFT_SHIFT  &none  &kp LS(LA(LEFT))        &none               &kp LA(LS(RIGHT))  &none   &kp LC(O)      &del_line  &none   &kp LA(LEFT_ARROW)  &none     &kp LA(RIGHT)  &none           &kp RIGHT_SHIFT
                        &trans                  &trans              &trans             &trans  &kp LS(ENTER)  &trans     &trans  &trans              &trans    &trans
@@ -287,8 +282,8 @@
             bindings = <
 &bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                             &to_eng  &to_ua  &to_ru  &none  &kp CAPSLOCK  &to_eng
 &ext_power EP_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF  &kp DEL                            &mkp MB1        &mmv MOVE_UP    &mkp MB2         &msc SCRL_UP    &none
-&none              &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none            &kp BACKSPACE                      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &none
-&none              &none            &none            &none            &none            &none            &rgb_ug RGB_TOG  &none  &none      &none           &none           &none            &none           &none
+&sys_reset         &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none            &kp BACKSPACE                      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &sys_reset
+&bootloader        &none            &none            &none            &none            &none            &rgb_ug RGB_TOG  &none  &none      &none           &none           &none            &none           &bootloader
                                     &none            &none            &none            &none            &none            &none  &none      &none           &none           &none
             >;
         };
