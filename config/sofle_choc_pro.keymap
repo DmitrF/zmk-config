@@ -11,21 +11,22 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
+// Layer indices; bindings below use the numbers directly
 #define ENG 0
 #define UA 1
 #define RU 2
-#define LOWER 3
+#define PUNKT 3
 #define NAV 4
 #define ADJUST 5
 #define SERVICE 6
 
 / {
-    // Activate ADJUST layer by pressing raise and lower
+    // Activate adjust layer by holding punkt and nav together
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        adjust_layer {
+        punkt_nav_to_adjust {
             if-layers = <3 4>;
             then-layer = <5>;
         };
@@ -88,7 +89,7 @@
             label = "SELECT_WORD";
         };
 
-        ua_punkt_macro: ua_punkt_macro {
+        punkt_ua: punkt_ua {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
@@ -104,10 +105,10 @@
                 <&macro_tap>,
                 <&kp LANG2>;
 
-            label = "UA_PUNKT_MACRO";
+            label = "PUNKT_UA";
         };
 
-        ru_punkt_macro: ru_punkt_macro {
+        punkt_ru: punkt_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
@@ -123,28 +124,28 @@
                 <&macro_tap>,
                 <&kp LANG3>;
 
-            label = "RU_PUNKT_MACRO";
+            label = "PUNKT_RU";
         };
 
-        en_to_ua_macro: en_to_ua_macro {
+        to_ua: to_ua {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LANG2 &to 1>;
-            label = "EN_TO_UA_MACRO";
+            label = "TO_UA";
         };
 
-        ua_to_eng_macro: ua_to_eng_macro {
+        to_eng: to_eng {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LANG1 &to 0>;
-            label = "UA_TO_ENG_MACRO";
+            label = "TO_ENG";
         };
 
-        to_ru_macro: to_ru_macro {
+        to_ru: to_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LANG3 &to 2>;
-            label = "TO_RU_MACRO";
+            label = "TO_RU";
         };
     };
 
@@ -205,8 +206,8 @@
     keymap {
         compatible = "zmk,keymap";
 
-        eng_main {
-            display-name = "eng_main";
+        eng {
+            display-name = "eng";
 
             // ------------------------------------------------------------------------------------------------------------
             // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
@@ -218,38 +219,38 @@
             bindings = <
 &kp ESC          &kp N1  &kp N2            &kp N3    &kp N4    &kp N5                         &kp N6  &kp N7        &kp N8     &kp N9             &kp N0             &kp GRAVE
 &kp TAB          &kp Q   &kp W             &kp E     &kp R     &kp T   &kp Y                          &kp U         &kp I      &kp O              &kp P              &uml_u_behavior
-&en_to_ua_macro  &kp A   &kp S             &kp D     &kp F     &kp G   &kp H                          &kp J         &kp K      &kp L              &uml_o_behavior    &uml_a_behavior
+&to_ua  &kp A   &kp S             &kp D     &kp F     &kp G   &kp H                          &kp J         &kp K      &kp L              &uml_o_behavior    &uml_a_behavior
 &kp LSHFT        &kp Z   &kp X             &kp C     &kp V     &kp B   &kp COMMA  &kp PERIOD  &kp N   &kp M         &kp COMMA  &kp DOT            &kp RIGHT_BRACKET  &kp RSHFT
                          &kp LEFT_CONTROL  &kp LALT  &kp LGUI  &mo 3   &kp RET    &kp SPACE   &mo 4   &kp LEFT_GUI  &kp RALT   &kp RIGHT_CONTROL
             >;
         };
 
-        ua_main {
-            display-name = "ua_main";
+        ua {
+            display-name = "ua";
 
             bindings = <
 &kp ESC           &kp N1  &kp N2     &kp N3    &kp N4    &kp N5                                     &kp N6  &kp N7        &kp N8     &kp N9     &kp N0             &kp BACKSLASH
 &kp TAB           &kp Q   &kp W      &kp E     &kp R     &kp T            &kp Y                             &kp U         &kp I      &kp O      &kp P              &kp LBKT
-&ua_to_eng_macro  &kp A   &kp S      &kp D     &kp F     &kp G            &kp H                             &kp J         &kp K      &kp L      &kp SEMI           &kp APOS
+&to_eng  &kp A   &kp S      &kp D     &kp F     &kp G            &kp H                             &kp J         &kp K      &kp L      &kp SEMI           &kp APOS
 &kp LSHFT         &kp Z   &kp X      &kp C     &kp V     &kp B            &kp LS(SLASH)  &kp SLASH  &kp N   &kp M         &kp COMMA  &kp DOT    &kp RIGHT_BRACKET  &kp GRAVE
-                          &kp LCTRL  &kp LALT  &kp LGUI  &ua_punkt_macro  &kp ENTER      &kp SPACE  &mo 4   &kp LEFT_GUI  &kp RALT   &kp RCTRL
+                          &kp LCTRL  &kp LALT  &kp LGUI  &punkt_ua  &kp ENTER      &kp SPACE  &mo 4   &kp LEFT_GUI  &kp RALT   &kp RCTRL
             >;
         };
 
-        ru_main {
-            display-name = "ru_main";
+        ru {
+            display-name = "ru";
 
             bindings = <
 &kp ESC           &kp N1  &kp N2     &kp N3    &kp N4    &kp N5                                     &kp N6  &kp N7        &kp N8     &kp N9     &kp N0             &kp BACKSLASH
 &kp TAB           &kp Q   &kp W      &kp E     &kp R     &kp T            &kp Y                             &kp U         &kp I      &kp O      &kp P              &kp LBKT
-&ua_to_eng_macro  &kp A   &kp S      &kp D     &kp F     &kp G            &kp H                             &kp J         &kp K      &kp L      &kp SEMI           &kp APOS
+&to_eng  &kp A   &kp S      &kp D     &kp F     &kp G            &kp H                             &kp J         &kp K      &kp L      &kp SEMI           &kp APOS
 &kp LSHFT         &kp Z   &kp X      &kp C     &kp V     &kp B            &kp LS(SLASH)  &kp SLASH  &kp N   &kp M         &kp COMMA  &kp DOT    &kp RIGHT_BRACKET  &kp GRAVE
-                          &kp LCTRL  &kp LALT  &kp LGUI  &ru_punkt_macro  &kp ENTER      &kp SPACE  &mo 4   &kp LEFT_GUI  &kp RALT   &kp RCTRL
+                          &kp LCTRL  &kp LALT  &kp LGUI  &punkt_ru  &kp ENTER      &kp SPACE  &mo 4   &kp LEFT_GUI  &kp RALT   &kp RCTRL
             >;
         };
 
-        lower_layer {
-            display-name = "lower";
+        punkt {
+            display-name = "punkt";
 
             // ------------------------------------------------------------------------------------------------------------
             // |       |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
@@ -265,11 +266,9 @@
 &kp LEFT_SHIFT  &kp N0           &kp N1  &kp N2  &kp N3  &kp MINUS     &kp COMMA         &kp DOT  &kp HASH  &kp BACKSLASH      &kp PIPE              &kp SLASH              &kp GLOBE          &kp RIGHT_SHIFT
                                  &trans  &trans  &trans  &trans        &trans            &trans   &trans    &trans             &trans                &trans
             >;
-
-            label = "low";
         };
 
-        nav_layer {
+        nav {
             display-name = "nav";
 
             // ------------------------------------------------------------------------------------------------------------
@@ -288,7 +287,7 @@
             >;
         };
 
-        adjust_layer {
+        adjust {
             // ----------------------------------------------------------------------------------------------------------------------------
             // | BTCLR  |  BT1    |  BT2    |   BT3   |   BT4   |   BT5   |                  |      |      |       |      |       |       |
             // | EXTPWR | RGB_HUD | RGB_HUI | RGB_SAD | RGB_SAI | RGB_EFF |                  |      |      |       |      |       |       |
@@ -298,7 +297,7 @@
 
             display-name = "adjust";
             bindings = <
-&none  &none       &none             &none             &none             &none                        &ua_to_eng_macro  &en_to_ua_macro  &to_ru_macro  &none  &kp CAPSLOCK  &ua_to_eng_macro
+&none  &none       &none             &none             &none             &none                        &to_eng  &to_ua  &to_ru  &none  &kp CAPSLOCK  &to_eng
 &none  &none       &kp LS(N7)        &kp LS(N8)        &kp LS(N9)        &none  &kp DEL                          &mkp MB1        &mmv MOVE_UP    &mkp MB2         &msc SCRL_UP    &none
 &none  &none       &kp LS(NUMBER_4)  &kp LS(N5)        &kp LS(NUMBER_6)  &none  &kp BACKSPACE                    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &none
 &none  &kp LS(N0)  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &none  &none          &mo 6  &none      &none           &none           &none            &none           &none
@@ -306,10 +305,10 @@
             >;
         };
 
-        service_layer {
+        service {
             display-name = "service";
             bindings = <
-&bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                             &ua_to_eng_macro  &en_to_ua_macro  &to_ru_macro  &none  &kp CAPSLOCK  &ua_to_eng_macro
+&bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                             &to_eng  &to_ua  &to_ru  &none  &kp CAPSLOCK  &to_eng
 &ext_power EP_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF  &kp DEL                            &mkp MB1        &mmv MOVE_UP    &mkp MB2         &msc SCRL_UP    &none
 &none              &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none            &kp BACKSPACE                      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &none
 &none              &none            &none            &none            &none            &studio_unlock   &rgb_ug RGB_TOG  &none  &none      &none           &none           &none            &none           &none
