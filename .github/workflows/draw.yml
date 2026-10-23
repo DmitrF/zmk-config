@@ -1,0 +1,35 @@
+name: Draw keymap
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "config/*.keymap"
+      - "keymap-drawer/**"
+      - "boards/arm/sofle_choc_pro/sofle_choc_pro-layouts.dtsi"
+      - ".github/workflows/draw.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  draw:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install keymap-drawer==0.23.0
+      - name: Parse and draw
+        run: |
+          keymap -c keymap-drawer/config.yaml parse -z config/sofle_choc_pro.keymap > keymap-drawer/sofle_choc_pro.yaml
+          python keymap-drawer/cyrillic.py keymap-drawer/sofle_choc_pro.yaml
+          keymap -c keymap-drawer/config.yaml draw \
+            -d boards/arm/sofle_choc_pro/sofle_choc_pro-layouts.dtsi \
+            keymap-drawer/sofle_choc_pro.yaml > keymap-drawer/sofle_choc_pro.svg
+      - name: Commit picture
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add keymap-drawer/sofle_choc_pro.yaml keymap-drawer/sofle_choc_pro.svg
+          git diff --cached --quiet || (git commit -m "Redraw keymap picture" && git push)

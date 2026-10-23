@@ -1,0 +1,37 @@
+name: Publish latest firmware
+# After a successful firmware build on main, replace the "latest" release
+# with the new .uf2 files, so they can be downloaded from the repo page.
+on:
+  workflow_run:
+    workflows: ["Build ZMK firmware"]
+    types: [completed]
+    branches: [main]
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  publish:
+    if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: firmware
+          path: firmware
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+      - name: Replace the "latest" release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          SHA: ${{ github.event.workflow_run.head_sha }}
+          RUN_URL: ${{ github.event.workflow_run.html_url }}
+        run: |
+          gh release delete latest --cleanup-tag --yes || true
+          gh release create latest firmware/*.uf2 \
+            --target "$SHA" \
+            --title "Latest firmware" \
+            --notes "Built from ${SHA::7} ($RUN_URL). Flash \`*left*\` to the left half and \`*right*\` to the right half; \`settings_reset\` only to wipe settings and Bluetooth pairings." \
+            --latest
