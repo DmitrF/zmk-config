@@ -13,6 +13,9 @@ parse_config:
     "&to_ru": {t: "→RU", h: "мова"}
     "&punkt_ua": {t: "punkt", h: "тимч. EN"}
     "&punkt_ru": {t: "punkt", h: "тимч. EN"}
+    "&punkt_q_eng": "?"
+    "&punkt_q_ua": "?"
+    "&punkt_q_ru": "?"
     # text editing macros
     "&del_line": {t: "⌫", h: "рядок"}
     "&select_word": {t: "виділ.", h: "слово"}
