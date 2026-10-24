@@ -62,17 +62,17 @@
                         "description": "Rotate Languages 3",
                         "manipulators": [
                             {
-                                "from": { "key_code": "lang1" },
+                                "from": { "key_code": "lang1", "modifiers": { "optional": ["any"] } },
                                 "to": [{ "select_input_source": { "language": "^en$" } }],
                                 "type": "basic"
                             },
                             {
-                                "from": { "key_code": "lang2" },
+                                "from": { "key_code": "lang2", "modifiers": { "optional": ["any"] } },
                                 "to": [{ "select_input_source": { "language": "^uk$" } }],
                                 "type": "basic"
                             },
                             {
-                                "from": { "key_code": "lang3" },
+                                "from": { "key_code": "lang3", "modifiers": { "optional": ["any"] } },
                                 "to": [{ "select_input_source": { "language": "^ru$" } }],
                                 "type": "basic"
                             }
