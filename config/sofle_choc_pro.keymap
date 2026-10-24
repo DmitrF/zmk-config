@@ -250,7 +250,7 @@
 &kp GRAVE       &kp AT           &kp DOLLAR  &kp PERCENT  &kp CARET  &kp AMPERSAND                                 &kp LBRC           &kp RBRC              &kp TILDE              &kp LS(LA(N2))     &kp LA(BACKSLASH)  &kp LA(LEFT_BRACKET)
 &kp TAB         &kp EXCLAMATION  &kp N7      &kp N8       &kp N9     &kp ASTERISK   &kp LEFT_BRACKET                     &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES  &kp LS(LA(RIGHT_BRACKET))
 &kp QUESTION    &kp EQUAL        &kp N4      &kp N5       &kp N6     &kp PLUS       &kp UNDERSCORE                       &kp SEMICOLON      &kp COLON             &kp RA(MINUS)          &kp SQT            &kp NON_US_BACKSLASH
-&kp LEFT_SHIFT  &kp N0           &kp N1      &kp N2       &kp N3     &kp MINUS      &kp LT          &kp GT    &kp HASH  &kp BACKSLASH      &kp PIPE              &kp SLASH              &kp GLOBE          &kp RIGHT_SHIFT
+&kp LEFT_SHIFT  &kp N0           &kp N1      &kp N2       &kp N3     &kp MINUS      &kp COMMA       &kp DOT   &kp HASH  &kp BACKSLASH      &kp PIPE              &kp SLASH              &kp GLOBE          &kp RIGHT_SHIFT
                                  &trans      &trans       &trans     &trans         &trans          &trans    &trans    &trans             &trans                &trans
             >;
         };
