@@ -42,17 +42,33 @@
             label = "UML_U_SMALL";
         };
 
+        // Capital umlauts are typed with Shift held; the mod-morph masks it.
+        // Option goes down in its own report so Shift disappears before U:
+        // Karabiner handles key downs before modifier ups within one report,
+        // which turned Shift-up + Option-U into Shift+Option+U ("¨").
         uml_u_big: uml_u_big {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(U) &kp LS(U)>;
+            wait-ms = <0>;
+            tap-ms = <10>;
+            bindings =
+                <&macro_press &kp LALT>,
+                <&macro_tap &kp U>,
+                <&macro_release &kp LALT>,
+                <&macro_tap &kp LS(U)>;
             label = "UML_U_BIG";
         };
 
         uml_o_big: uml_o_big {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(U) &kp LS(O)>;
+            wait-ms = <0>;
+            tap-ms = <10>;
+            bindings =
+                <&macro_press &kp LALT>,
+                <&macro_tap &kp U>,
+                <&macro_release &kp LALT>,
+                <&macro_tap &kp LS(O)>;
             label = "UML_O_BIG";
         };
 
@@ -66,7 +82,13 @@
         uml_a_big: uml_a_big {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(U) &kp LS(A)>;
+            wait-ms = <0>;
+            tap-ms = <10>;
+            bindings =
+                <&macro_press &kp LALT>,
+                <&macro_tap &kp U>,
+                <&macro_release &kp LALT>,
+                <&macro_tap &kp LS(A)>;
             label = "UML_A_BIG";
         };
 
@@ -82,6 +104,19 @@
             #binding-cells = <0>;
             bindings = <&kp LG(LEFT) &kp LS(LG(RIGHT)) &kp BACKSPACE>;
             label = "DEL_LINE";
+        };
+
+        sz_shifted: sz_shifted {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <10>;
+            bindings =
+                <&macro_press &kp LALT>,
+                <&macro_tap &kp S>,
+                <&macro_release &kp LALT>;
+
+            label = "SZ_SHIFTED";
         };
 
         select_word: select_word {
@@ -193,7 +228,7 @@
         sz_behavior: sz_behavior {
             compatible = "zmk,behavior-mod-morph";
             label = "SZ_BEHAVIOR";
-            bindings = <&kp LA(S)>, <&kp LA(S)>;
+            bindings = <&kp LA(S)>, <&sz_shifted>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
