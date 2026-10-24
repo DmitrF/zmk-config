@@ -31,7 +31,6 @@ parse_config:
     "&kp LEFT_GUI": "⌘"
     "&kp RET": "⏎"
     "&kp ENTER": "⏎"
-    "&kp LS(ENTER)": "⇧⏎"
     "&kp SPACE": "␣"
     "&kp TAB": "⇥"
     "&kp ESC": "esc"
@@ -86,11 +85,29 @@ parse_config:
     "&kp C_MUTE": "🔇"
     "&kp C_VOL_DN": "🔉"
     "&kp C_VOL_UP": "🔊"
-    # punkt: typography via Option on the U.S./ABC layout
-    "&kp LS(LA(N2))": "€"
-    "&kp LA(BACKSLASH)": {t: "«", s: "»"}
-    "&kp LA(LEFT_BRACKET)": {t: "“", s: "”"}
+    # punkt
+    "&eur_usd DOLLAR LS(LA(N2))": {t: "€", h: "$"}
+    "&kp LS(ENTER)": "⇧⏎"
+    "&mo 7": "typo"
+    # typo: Option combos on the U.S. layout
+    "&kp LA(J)": "∆"
+    "&kp LA(X)": "≈"
+    "&kp LS(LA(N8))": "°"
+    "&kp LS(LA(W))": "„"
+    "&kp LA(LEFT_BRACKET)": "“"
+    "&kp LS(LA(LEFT_BRACKET))": "”"
+    "&kp LA(COMMA)": "≤"
+    "&kp LA(DOT)": "≥"
     "&kp LS(LA(RIGHT_BRACKET))": "’"
+    "&kp LA(SLASH)": "÷"
+    "&kp LA(BACKSLASH)": "«"
+    "&kp LS(LA(BACKSLASH))": "»"
+    "&kp LA(MINUS)": "–"
+    "&kp LS(LA(MINUS))": "—"
+    "&kp LA(N6)": "§"
+    "&kp LA(EQUAL)": "≠"
+    "&kp LS(LA(EQUAL))": "±"
+    "&kp LA(SEMICOLON)": "…"
     # nav: tabs, windows, clipboard
     "&kp LS(TAB)": "⇧⇥"
     "&kp LG(W)": {t: "закр.", h: "⌘W"}

@@ -20,6 +20,7 @@
 #define NAV 4
 #define SYS 5
 #define SERVICE 6
+#define TYPO 7
 
 / {
     // Activate sys layer by holding punkt and nav together
@@ -151,6 +152,17 @@
     };
 
     behaviors {
+        // € on tap, $ on hold
+        eur_usd: eur_usd {
+            compatible = "zmk,behavior-hold-tap";
+            label = "EUR_USD";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+        };
+
         uml_a_behavior: uml_a_behavior {
             compatible = "zmk,behavior-mod-morph";
             label = "UML_A_BEHAVIOR";
@@ -247,11 +259,11 @@
         punkt {
             display-name = "punkt";
             bindings = <
-&kp GRAVE       &kp AT           &kp DOLLAR  &kp PERCENT  &kp CARET  &kp AMPERSAND                                 &kp LBRC           &kp RBRC              &kp TILDE              &kp LS(LA(N2))     &kp LA(BACKSLASH)  &kp LA(LEFT_BRACKET)
-&kp TAB         &kp EXCLAMATION  &kp N7      &kp N8       &kp N9     &kp ASTERISK   &kp LEFT_BRACKET                     &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES  &kp LS(LA(RIGHT_BRACKET))
-&kp QUESTION    &kp EQUAL        &kp N4      &kp N5       &kp N6     &kp PLUS       &kp UNDERSCORE                       &kp SEMICOLON      &kp COLON             &kp RA(MINUS)          &kp SQT            &kp NON_US_BACKSLASH
-&kp LEFT_SHIFT  &kp N0           &kp N1      &kp N2       &kp N3     &kp MINUS      &kp COMMA       &kp DOT   &kp HASH  &kp BACKSLASH      &kp PIPE              &kp SLASH              &kp GLOBE          &kp RIGHT_SHIFT
-                                 &trans      &trans       &trans     &trans         &trans          &trans    &trans    &trans             &trans                &trans
+&kp TILDE       &eur_usd DOLLAR LS(LA(N2))  &kp PERCENT  &kp EQUAL  &kp CARET  &kp ASTERISK                           &kp PIPE        &kp LBKT    &kp RBKT  &kp LT        &kp GT           &kp AMPERSAND
+&kp LS(TAB)     &kp TAB                     &kp N7       &kp N8     &kp N9     &kp SLASH     &kp BACKSLASH                          &kp LPAR    &kp RPAR  &kp LBRC      &kp RBRC         &mo 7
+&kp LS(ENTER)   &kp ENTER                   &kp N4       &kp N5     &kp N6     &kp MINUS     &kp UNDERSCORE                         &kp SLASH   &kp AT    &kp HASH      &kp QUESTION     &kp EXCLAMATION
+&kp LEFT_SHIFT  &kp N0                      &kp N1       &kp N2     &kp N3     &kp PLUS      &kp COMMA       &kp DOT  &kp SEMICOLON  &kp COLON   &kp DOUBLE_QUOTES  &kp SQT  &kp GRAVE  &kp RIGHT_SHIFT
+                                            &trans       &trans     &trans     &trans        &trans          &trans   &trans         &trans      &trans    &trans
             >;
         };
 
@@ -285,6 +297,17 @@
 &sys_reset         &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none            &kp BACKSPACE                    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &sys_reset
 &bootloader        &none            &none            &none            &none            &none            &rgb_ug RGB_TOG  &none  &none    &none           &none           &none            &none           &bootloader
                                     &none            &none            &none            &none            &none            &none  &none    &none           &none           &none
+            >;
+        };
+
+        typo {
+            display-name = "typo";
+            bindings = <
+&none           &none   &kp LA(J)  &kp LA(X)  &kp LS(LA(N8))  &none                                   &kp LS(LA(W))      &kp LA(LEFT_BRACKET)  &kp LS(LA(LEFT_BRACKET))  &kp LA(COMMA)  &kp LA(DOT)            &kp LS(LA(RIGHT_BRACKET))
+&none           &none   &none      &none      &none           &kp LA(SLASH)                           &none              &none                 &none                     &kp LA(BACKSLASH)  &kp LS(LA(BACKSLASH))  &trans
+&none           &none   &none      &none      &none           &kp LA(MINUS)                           &kp LS(LA(MINUS))  &none                 &none                     &none          &kp LA(N6)             &kp LA(EQUAL)
+&kp LEFT_SHIFT  &none   &none      &none      &none           &kp LS(LA(EQUAL))  &trans  &trans       &none              &kp LA(SEMICOLON)     &none                     &none          &none                  &kp RIGHT_SHIFT
+                        &trans     &trans     &trans          &trans             &trans  &trans       &trans             &trans                &trans                    &trans
             >;
         };
     };
