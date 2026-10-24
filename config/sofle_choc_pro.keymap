@@ -305,7 +305,7 @@
             bindings = <
 &none           &none   &kp LA(J)  &kp LA(X)  &kp LS(LA(N8))  &none                                   &kp LS(LA(W))      &kp LA(LEFT_BRACKET)  &kp LS(LA(LEFT_BRACKET))  &kp LA(COMMA)  &kp LA(DOT)            &kp LS(LA(RIGHT_BRACKET))
 &none           &none   &none      &none      &none           &kp LA(SLASH)                           &none              &none                 &none                     &kp LA(BACKSLASH)  &kp LS(LA(BACKSLASH))  &trans
-&none           &none   &none      &none      &none           &kp LA(MINUS)                           &kp LS(LA(MINUS))  &none                 &none                     &none          &kp LA(N6)             &kp LA(EQUAL)
+&none           &kp SQT &kp SEMI   &kp L      &kp K           &kp LA(MINUS)                           &kp LS(LA(MINUS))  &none                 &none                     &none          &kp LA(N6)             &kp LA(EQUAL)
 &kp LEFT_SHIFT  &none   &none      &none      &none           &kp LS(LA(EQUAL))  &trans  &trans       &none              &kp LA(SEMICOLON)     &none                     &none          &none                  &kp RIGHT_SHIFT
                         &trans     &trans     &trans          &trans             &trans  &trans       &trans             &trans                &trans                    &trans
             >;
