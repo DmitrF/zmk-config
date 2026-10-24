@@ -75,16 +75,49 @@ parse_config:
     "&mmv MOVE_RIGHT": "🖱→"
     "&msc SCRL_UP": "⇞ скрол"
     "&msc SCRL_DOWN": "⇟ скрол"
-    # shifted digits on adjust
-    "&kp LS(N0)": ")"
-    "&kp LS(NUMBER_1)": "!"
-    "&kp LS(NUMBER_2)": "@"
-    "&kp LS(NUMBER_3)": "#"
-    "&kp LS(NUMBER_4)": "$"
-    "&kp LS(N5)": "%"
-    "&kp LS(NUMBER_6)": "^"
-    "&kp LS(N7)": "&"
-    "&kp LS(N8)": "*"
-    "&kp LS(N9)": "("
+    # top row of base layers
+    "&kp C_BRI_DN": "☀−"
+    "&kp C_BRI_UP": "☀+"
+    "&kp C_PREV": "⏮"
+    "&kp C_PP": "⏯"
+    "&kp C_NEXT": "⏭"
+    "&kp LG(MINUS)": {t: "зум −", h: "⌘−"}
+    "&kp LG(EQUAL)": {t: "зум +", h: "⌘="}
+    "&kp C_MUTE": "🔇"
+    "&kp C_VOL_DN": "🔉"
+    "&kp C_VOL_UP": "🔊"
+    # punkt: typography via Option on the U.S./ABC layout
+    "&kp LS(LA(N2))": "€"
+    "&kp LA(BACKSLASH)": {t: "«", s: "»"}
+    "&kp LA(LEFT_BRACKET)": {t: "“", s: "”"}
+    "&kp LS(LA(RIGHT_BRACKET))": "’"
+    # nav: tabs, windows, clipboard
+    "&kp LS(TAB)": "⇧⇥"
+    "&kp LG(W)": {t: "закр.", h: "⌘W"}
+    "&kp LG(LS(T))": {t: "відкр.", h: "⌘⇧T"}
+    "&kp LG(T)": {t: "нова вкл.", h: "⌘T"}
+    "&kp LG(GRAVE)": {t: "вікно", h: "⌘`"}
+    "&kp LG(M)": {t: "згорн.", h: "⌘M"}
+    "&kp LG(LBKT)": {t: "назад", h: "⌘["}
+    "&kp LG(RBKT)": {t: "вперед", h: "⌘]"}
+    "&kp LG(UP)": {t: "⤒", h: "початок"}
+    "&kp LG(DOWN)": {t: "⤓", h: "кінець"}
+    "&kp LA(DEL)": {t: "⌦", h: "слово"}
+    "&kp LA(BACKSPACE)": {t: "⌫", h: "слово"}
+    "&kp LG(Z)": {t: "undo", h: "⌘Z"}
+    "&kp LG(LS(Z))": {t: "redo", h: "⌘⇧Z"}
+    "&kp LG(X)": {t: "cut", h: "⌘X"}
+    "&kp LG(C)": {t: "copy", h: "⌘C"}
+    "&kp LG(V)": {t: "paste", h: "⌘V"}
+    "&kp LC(LS(TAB))": {t: "← вкл.", h: "⌃⇧⇥"}
+    "&kp LC(TAB)": {t: "вкл. →", h: "⌃⇥"}
+    # sys
+    "&kp LG(SPACE)": {t: "Spotlight", h: "⌘␣"}
+    "&kp LS(LG(N4))": {t: "скрін", h: "⌘⇧4"}
+    "&kp LS(LG(N5))": {t: "скрін ⚙", h: "⌘⇧5"}
+    "&kp LC(UP)": {t: "Mission", h: "⌃↑"}
+    "&kp LC(DOWN)": {t: "вікна пр.", h: "⌃↓"}
+    "&kp LC(LG(SPACE))": {t: "емодзі", h: "⌃⌘␣"}
+    "&kp LC(LG(Q))": {t: "lock", h: "⌃⌘Q"}
 draw_config:
   footer_text: "Sofle Choc Pro · ua/ru: підписи як у розкладках macOS Ukrainian-PC / Russian-PC"

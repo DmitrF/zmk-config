@@ -18,16 +18,16 @@
 #define RU 2
 #define PUNKT 3
 #define NAV 4
-#define ADJUST 5
+#define SYS 5
 #define SERVICE 6
 
 / {
-    // Activate adjust layer by holding punkt and nav together
+    // Activate sys layer by holding punkt and nav together
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        punkt_nav_to_adjust {
+        punkt_nav_to_sys {
             if-layers = <3 4>;
             then-layer = <5>;
         };
@@ -214,7 +214,7 @@
         eng {
             display-name = "eng";
             bindings = <
-&kp ESC    &kp N1  &kp N2            &kp N3    &kp N4    &kp N5                         &kp N6  &kp N7         &kp N8     &kp N9             &kp N0           &kp GRAVE
+&kp ESC    &kp C_BRI_DN  &kp C_BRI_UP  &kp C_PREV  &kp C_PP  &kp C_NEXT  &kp LG(MINUS)  &kp LG(EQUAL)  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp GRAVE
 &kp TAB    &kp Q   &kp W             &kp E     &kp R     &kp T   &kp Y                          &kp U          &kp I      &kp O              &kp P            &uml_u_behavior
 &to_ua     &kp A   &kp S             &kp D     &kp F     &kp G   &kp H                          &kp J          &kp K      &kp L              &uml_o_behavior  &uml_a_behavior
 &kp LSHFT  &kp Z   &kp X             &kp C     &kp V     &kp B   &kp COMMA  &kp PERIOD  &kp N   &kp M          &kp COMMA  &kp DOT            &sz_behavior     &kp RSHFT
@@ -225,7 +225,7 @@
         ua {
             display-name = "ua";
             bindings = <
-&kp ESC    &kp N1  &kp N2     &kp N3    &kp N4    &kp N5                               &kp N6  &kp N7    &kp N8     &kp N9     &kp N0             &kp BACKSLASH
+&kp ESC    &kp C_BRI_DN  &kp C_BRI_UP  &kp C_PREV  &kp C_PP  &kp C_NEXT  &kp LG(MINUS)  &kp LG(EQUAL)  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp BACKSLASH
 &kp TAB    &kp Q   &kp W      &kp E     &kp R     &kp T      &kp Y                             &kp U     &kp I      &kp O      &kp P              &kp LBKT
 &to_eng    &kp A   &kp S      &kp D     &kp F     &kp G      &kp H                             &kp J     &kp K      &kp L      &kp SEMI           &kp APOS
 &kp LSHFT  &kp Z   &kp X      &kp C     &kp V     &kp B      &kp LS(SLASH)  &kp SLASH  &kp N   &kp M     &kp COMMA  &kp DOT    &kp RIGHT_BRACKET  &kp GRAVE
@@ -236,7 +236,7 @@
         ru {
             display-name = "ru";
             bindings = <
-&kp ESC    &kp N1  &kp N2     &kp N3    &kp N4    &kp N5                               &kp N6  &kp N7    &kp N8     &kp N9     &kp N0             &kp BACKSLASH
+&kp ESC    &kp C_BRI_DN  &kp C_BRI_UP  &kp C_PREV  &kp C_PP  &kp C_NEXT  &kp LG(MINUS)  &kp LG(EQUAL)  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp BACKSLASH
 &kp TAB    &kp Q   &kp W      &kp E     &kp R     &kp T      &kp Y                             &kp U     &kp I      &kp O      &kp P              &kp LBKT
 &to_eng    &kp A   &kp S      &kp D     &kp F     &kp G      &kp H                             &kp J     &kp K      &kp L      &kp SEMI           &kp APOS
 &kp LSHFT  &kp Z   &kp X      &kp C     &kp V     &kp B      &kp LS(SLASH)  &kp SLASH  &kp N   &kp M     &kp COMMA  &kp DOT    &kp RIGHT_BRACKET  &kp GRAVE
@@ -247,33 +247,33 @@
         punkt {
             display-name = "punkt";
             bindings = <
-&kp GRAVE       &none            &none   &none   &none   &none                                    &none     &none              &none                 &none                  &none              &none
-&kp TAB         &kp EXCLAMATION  &kp N7  &kp N8  &kp N9  &kp ASTERISK  &kp LEFT_BRACKET                     &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES  &none
-&kp QUESTION    &kp EQUAL        &kp N4  &kp N5  &kp N6  &kp PLUS      &kp UNDERSCORE                       &kp SEMICOLON      &kp COLON             &kp RA(MINUS)          &kp SQT            &kp NON_US_BACKSLASH
-&kp LEFT_SHIFT  &kp N0           &kp N1  &kp N2  &kp N3  &kp MINUS     &kp COMMA         &kp DOT  &kp HASH  &kp BACKSLASH      &kp PIPE              &kp SLASH              &kp GLOBE          &kp RIGHT_SHIFT
-                                 &trans  &trans  &trans  &trans        &trans            &trans   &trans    &trans             &trans                &trans
+&kp GRAVE       &kp AT           &kp DOLLAR  &kp PERCENT  &kp CARET  &kp AMPERSAND                                 &kp LBRC           &kp RBRC              &kp TILDE              &kp LS(LA(N2))     &kp LA(BACKSLASH)  &kp LA(LEFT_BRACKET)
+&kp TAB         &kp EXCLAMATION  &kp N7      &kp N8       &kp N9     &kp ASTERISK   &kp LEFT_BRACKET                     &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES  &kp LS(LA(RIGHT_BRACKET))
+&kp QUESTION    &kp EQUAL        &kp N4      &kp N5       &kp N6     &kp PLUS       &kp UNDERSCORE                       &kp SEMICOLON      &kp COLON             &kp RA(MINUS)          &kp SQT            &kp NON_US_BACKSLASH
+&kp LEFT_SHIFT  &kp N0           &kp N1      &kp N2       &kp N3     &kp MINUS      &kp LT          &kp GT    &kp HASH  &kp BACKSLASH      &kp PIPE              &kp SLASH              &kp GLOBE          &kp RIGHT_SHIFT
+                                 &trans      &trans       &trans     &trans         &trans          &trans    &trans    &trans             &trans                &trans
             >;
         };
 
         nav {
             display-name = "nav";
             bindings = <
-&kp ESC         &kp F1        &kp F2                  &kp F3              &kp F4             &kp F5                            &kp F6  &kp F7              &kp F8    &kp F9         &kp F10         &kp RG(BACKSPACE)
-&trans          &select_word  &kp LS(LG(LEFT_ARROW))  &kp LS(UP)          &kp LS(LG(RIGHT))  &none   &kp DEL                           &kp LG(LEFT)        &kp UP    &kp LG(RIGHT)  &msc SCRL_UP    &kp PAGE_UP
-&none           &none         &kp LS(LEFT)            &kp LS(DOWN_ARROW)  &kp LS(RIGHT)      &none   &kp BACKSPACE                     &kp LEFT            &kp DOWN  &kp RIGHT      &msc SCRL_DOWN  &kp PG_DN
-&kp LEFT_SHIFT  &none         &kp LS(LA(LEFT))        &none               &kp LA(LS(RIGHT))  &none   &kp LC(O)      &del_line  &none   &kp LA(LEFT_ARROW)  &none     &kp LA(RIGHT)  &none           &kp RIGHT_SHIFT
-                              &trans                  &trans              &trans             &trans  &kp LS(ENTER)  &trans     &trans  &trans              &trans    &trans
+&kp ESC         &kp LG(W)         &kp LG(LS(T))     &kp LG(T)           &kp LG(GRAVE)      &kp LG(M)                                 &kp LA(DEL)        &kp LG(LBKT)        &kp LG(UP)  &kp LG(RBKT)   &none           &kp RG(BACKSPACE)
+&kp TAB         &kp LS(LG(LEFT))  &kp LS(LA(LEFT))  &kp LS(UP)          &kp LS(LA(RIGHT))  &kp LS(LG(RIGHT))                         &kp DEL            &kp LG(LEFT)        &kp UP      &kp LG(RIGHT)  &msc SCRL_UP    &kp PAGE_UP
+&kp LS(TAB)     &select_word      &kp LS(LEFT)      &kp LS(DOWN_ARROW)  &kp LS(RIGHT)      &kp LC(O)                                 &kp BACKSPACE      &kp LEFT            &kp DOWN    &kp RIGHT      &msc SCRL_DOWN  &kp PG_DN
+&kp LEFT_SHIFT  &kp LG(Z)         &kp LG(X)         &kp LG(C)           &kp LG(V)          &kp LG(LS(Z))  &kp LC(LS(TAB))  &kp LC(TAB)  &kp LA(BACKSPACE)  &kp LA(LEFT_ARROW)  &kp LG(DOWN)  &kp LA(RIGHT)  &del_line       &kp RIGHT_SHIFT
+                                  &trans            &trans              &trans             &trans         &kp LS(ENTER)    &trans       &trans             &trans              &trans      &trans
             >;
         };
 
-        adjust {
-            display-name = "adjust";
+        sys {
+            display-name = "sys";
             bindings = <
-&none  &none       &none             &none             &none             &none                        &to_eng  &to_ua          &to_ru          &none            &kp CAPSLOCK    &to_eng
-&none  &none       &kp LS(N7)        &kp LS(N8)        &kp LS(N9)        &none  &kp DEL                        &mkp MB1        &mmv MOVE_UP    &mkp MB2         &msc SCRL_UP    &none
-&none  &none       &kp LS(NUMBER_4)  &kp LS(N5)        &kp LS(NUMBER_6)  &none  &kp BACKSPACE                  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &none
-&none  &kp LS(N0)  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &none  &none          &mo 6  &none    &none           &none           &none            &none           &none
-                   &none             &none             &none             &none  &none          &none  &none    &none           &none           &none
+&kp F1  &kp F2           &kp F3            &kp F4            &kp F5      &kp F6                        &kp F7     &kp F8          &kp F9          &kp F10          &kp F11         &kp F12
+&none   &kp LG(SPACE)    &kp LS(LG(N4))    &kp LS(LG(N5))    &kp LC(UP)  &none                         &kp DEL    &mkp MB1        &mmv MOVE_UP    &mkp MB2         &msc SCRL_UP    &none
+&none   &kp LC(LG(SPACE))  &kp LC(LG(Q))   &none             &kp LC(DOWN)  &none                       &kp BACKSPACE  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &none
+&none   &none            &none             &none             &none       &none   &none          &mo 6  &to_eng    &to_ua          &to_ru          &none            &kp CAPSLOCK    &none
+                         &none             &none             &none       &none   &none          &none  &none      &none           &none           &none
             >;
         };
 
