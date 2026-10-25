@@ -14,8 +14,6 @@ parse_config:
     "&punkt_ua": {t: "punkt", h: "тимч. EN"}
     "&punkt_ru": {t: "punkt", h: "тимч. EN"}
     # text editing macros
-    "&del_line": {t: "⌫", h: "рядок"}
-    "&select_word": {t: "виділ.", h: "слово"}
     # macOS-style modifiers
     "&kp LSHFT": "⇧"
     "&kp RSHFT": "⇧"
@@ -28,7 +26,6 @@ parse_config:
     "&kp LALT": "⌥"
     "&kp RALT": "⌥"
     "&kp LGUI": "⌘"
-    "&kp LEFT_GUI": "⌘"
     "&kp RET": "⏎"
     "&kp ENTER": "⏎"
     "&kp SPACE": "␣"
@@ -36,13 +33,7 @@ parse_config:
     "&kp ESC": "esc"
     "&kp BACKSPACE": "⌫"
     "&kp DEL": "⌦"
-    "&kp RG(BACKSPACE)": {t: "⌫", h: "до поч."}
     "&kp CAPSLOCK": "⇪"
-    "&kp CAPS": "⇪"
-    "&kp GLOBE": "🌐"
-    "&kp RA(MINUS)": "–"
-    "&kp NON_US_BACKSLASH": "§"
-    "&kp LC(O)": "⌃O"
     # firmware
     "&bootloader": {t: "boot", h: "прошивка"}
     "&sys_reset": {t: "reset", h: "перезап."}
@@ -51,20 +42,6 @@ parse_config:
     "&kp DOWN": "↓"
     "&kp LEFT": "←"
     "&kp RIGHT": "→"
-    "&kp LG(LEFT)": "⇤"
-    "&kp LG(RIGHT)": "⇥"
-    "&kp LA(LEFT_ARROW)": {t: "←", h: "слово"}
-    "&kp LA(RIGHT)": {t: "→", h: "слово"}
-    "&kp LS(UP)": "⇧↑"
-    "&kp LS(DOWN_ARROW)": "⇧↓"
-    "&kp LS(LEFT)": "⇧←"
-    "&kp LS(RIGHT)": "⇧→"
-    "&kp LS(LG(LEFT_ARROW))": "⇧⇤"
-    "&kp LS(LG(RIGHT))": "⇧⇥"
-    "&kp LS(LA(LEFT))": {t: "⇧←", h: "слово"}
-    "&kp LA(LS(RIGHT))": {t: "⇧→", h: "слово"}
-    "&kp PAGE_UP": "PgUp"
-    "&kp PG_DN": "PgDn"
     # mouse
     "&mkp MB1": "🖱L"
     "&mkp MB2": "🖱R"
@@ -87,7 +64,6 @@ parse_config:
     "&kp C_VOL_UP": "🔊"
     # punkt
     "&eur_usd DOLLAR LS(LA(N2))": {t: "€", h: "$"}
-    "&kp LS(ENTER)": "⇧⏎"
     "&mo 7": "typo"
     # typo: Option combos on the U.S. layout
     "&kp LA(J)": "∆"
@@ -108,26 +84,12 @@ parse_config:
     "&kp LA(EQUAL)": "≠"
     "&kp LS(LA(EQUAL))": "±"
     "&kp LA(SEMICOLON)": "…"
-    # nav: tabs, windows, clipboard
-    "&kp LS(TAB)": "⇧⇥"
-    "&kp LG(W)": {t: "закр.", h: "⌘W"}
-    "&kp LG(LS(T))": {t: "відкр.", h: "⌘⇧T"}
-    "&kp LG(T)": {t: "нова вкл.", h: "⌘T"}
-    "&kp LG(GRAVE)": {t: "вікно", h: "⌘`"}
-    "&kp LG(M)": {t: "згорн.", h: "⌘M"}
-    "&kp LG(LBKT)": {t: "назад", h: "⌘["}
-    "&kp LG(RBKT)": {t: "вперед", h: "⌘]"}
-    "&kp LG(UP)": {t: "⤒", h: "початок"}
-    "&kp LG(DOWN)": {t: "⤓", h: "кінець"}
-    "&kp LA(DEL)": {t: "⌦", h: "слово"}
-    "&kp LA(BACKSPACE)": {t: "⌫", h: "слово"}
+    # nav: clipboard
     "&kp LG(Z)": {t: "undo", h: "⌘Z"}
     "&kp LG(LS(Z))": {t: "redo", h: "⌘⇧Z"}
     "&kp LG(X)": {t: "cut", h: "⌘X"}
     "&kp LG(C)": {t: "copy", h: "⌘C"}
     "&kp LG(V)": {t: "paste", h: "⌘V"}
-    "&kp LC(LS(TAB))": {t: "← вкл.", h: "⌃⇧⇥"}
-    "&kp LC(TAB)": {t: "вкл. →", h: "⌃⇥"}
     # sys
     "&kp LG(SPACE)": {t: "Spotlight", h: "⌘␣"}
     "&kp LS(LG(N4))": {t: "скрін", h: "⌘⇧4"}
@@ -136,5 +98,36 @@ parse_config:
     "&kp LC(DOWN)": {t: "вікна пр.", h: "⌃↓"}
     "&kp LC(LG(SPACE))": {t: "емодзі", h: "⌃⌘␣"}
     "&kp LC(LG(Q))": {t: "lock", h: "⌃⌘Q"}
+    # nav, select, mouse: combos as text, keys underneath
+    "&nav_key": "nav"
+    "&nav_sel SEL 0": {t: "виділення", h: "тап / утрим."}
+    "&nav_mouse MOUSE 0": {t: "миша", h: "тап / утрим."}
+    "&kp LG(UP)": {t: "на початок", h: "⌘↑"}
+    "&kp LG(DOWN)": {t: "в кінець", h: "⌘↓"}
+    "&kp RG(BACKSPACE)": {t: "стерти до поч.", h: "⌘⌫"}
+    "&kp LG(LEFT)": {t: "поч. рядка", h: "⌘←"}
+    "&kp LG(RIGHT)": {t: "кін. рядка", h: "⌘→"}
+    "&kp LA(BACKSPACE)": {t: "стерти слово", h: "⌥⌫"}
+    "&kp LA(LEFT_ARROW)": {t: "слово ←", h: "⌥←"}
+    "&kp LA(RIGHT)": {t: "слово →", h: "⌥→"}
+    "&kp LS(ENTER)": {t: "новий рядок", h: "⇧⏎"}
+    "&kp LS(TAB)": {t: "таб назад", h: "⇧⇥"}
+    "&select_word": {t: "виділ. слово", h: "⌥← ⇧⌥→"}
+    "&del_line": {t: "стерти рядок", h: "⌘← ⇧⌘→ ⌫"}
+    "&kp LS(LG(UP))": {t: "до початку", h: "⇧⌘↑"}
+    "&kp LS(LG(DOWN))": {t: "до кінця", h: "⇧⌘↓"}
+    "&kp LS(LG(LEFT))": {t: "до поч. рядка", h: "⇧⌘←"}
+    "&kp LS(LG(RIGHT))": {t: "до кін. рядка", h: "⇧⌘→"}
+    "&kp LS(UP)": {t: "виділ. ↑", h: "⇧↑"}
+    "&kp LS(DOWN)": {t: "виділ. ↓", h: "⇧↓"}
+    "&kp LS(LEFT)": {t: "виділ. ←", h: "⇧←"}
+    "&kp LS(RIGHT)": {t: "виділ. →", h: "⇧→"}
+    "&kp LS(LA(LEFT))": {t: "слово ←", h: "⇧⌥←"}
+    "&kp LS(LA(RIGHT))": {t: "слово →", h: "⇧⌥→"}
+    "&mkp MB3": "🖱M"
+    "&msc SCRL_LEFT": "⇠ скрол"
+    "&msc SCRL_RIGHT": "⇢ скрол"
+    "&kp RIGHT_GUI": "⌘"
+    "&kp RGUI": "⌘"
 draw_config:
   footer_text: "Sofle Choc Pro · ua/ru: підписи як у розкладках macOS Ukrainian-PC / Russian-PC"
