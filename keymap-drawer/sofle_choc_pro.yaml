@@ -65,7 +65,7 @@ layers:
   - ⏎
   - ␣
   - nav
-  - RIGHT GUI
+  - ⌘
   - ⌥
   - ⌃
   ua:
@@ -130,7 +130,7 @@ layers:
   - ⏎
   - ␣
   - nav
-  - RGUI
+  - ⌘
   - ⌥
   - ⌃
   ru:
@@ -195,7 +195,7 @@ layers:
   - ⏎
   - ␣
   - nav
-  - RGUI
+  - ⌘
   - ⌥
   - ⌃
   punkt:
@@ -212,7 +212,8 @@ layers:
   - <
   - '>'
   - '&'
-  - ⇧⇥
+  - t: таб назад
+    h: ⇧⇥
   - ⇥
   - '7'
   - '8'
@@ -224,7 +225,8 @@ layers:
   - '{'
   - '}'
   - typo
-  - ⇧⏎
+  - t: новий рядок
+    h: ⇧⏎
   - ⏎
   - '4'
   - '5'
@@ -270,55 +272,49 @@ layers:
   - t: ▽
     type: trans
   nav:
-  - esc
-  - t: закр.
-    h: ⌘W
-  - t: відкр.
-    h: ⌘⇧T
-  - t: нова вкл.
-    h: ⌘T
-  - t: вікно
-    h: ⌘`
-  - t: згорн.
-    h: ⌘M
-  - t: ⌦
-    h: слово
-  - t: назад
-    h: ⌘[
-  - t: ⤒
-    h: початок
-  - t: вперед
-    h: ⌘]
   - ''
-  - t: ⌫
-    h: до поч.
-  - ⇥
-  - Sft+Gui+LEFT
-  - t: ⇧←
-    h: слово
-  - ⇧↑
-  - Sft+Alt+RIGHT
-  - ⇧⇥
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - t: на початок
+    h: ⌘↑
+  - ''
+  - ''
+  - t: стерти до поч.
+    h: ⌘⌫
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - ⌦
-  - ⇤
+  - t: поч. рядка
+    h: ⌘←
   - ↑
-  - ⇥
-  - ⇞ скрол
-  - PgUp
-  - ⇧⇥
-  - t: виділ.
-    h: слово
-  - ⇧←
-  - ⇧↓
-  - ⇧→
-  - ⌃O
+  - t: кін. рядка
+    h: ⌘→
+  - ''
+  - ''
+  - ''
+  - ''
+  - t: виділення
+    h: тап / утрим.
+  - ''
+  - ''
+  - t: миша
+    h: тап / утрим.
   - ⌫
   - ←
   - ↓
   - →
-  - ⇟ скрол
-  - PgDn
-  - ⇧
+  - ''
+  - ''
+  - ''
   - t: undo
     h: ⌘Z
   - t: cut
@@ -329,21 +325,18 @@ layers:
     h: ⌘V
   - t: redo
     h: ⌘⇧Z
-  - t: ← вкл.
-    h: ⌃⇧⇥
-  - t: вкл. →
-    h: ⌃⇥
-  - t: ⌫
-    h: слово
-  - t: ←
-    h: слово
-  - t: ⤓
-    h: кінець
-  - t: →
-    h: слово
-  - t: ⌫
-    h: рядок
-  - ⇧
+  - ''
+  - ''
+  - t: стерти слово
+    h: ⌥⌫
+  - t: слово ←
+    h: ⌥←
+  - t: в кінець
+    h: ⌘↓
+  - t: слово →
+    h: ⌥→
+  - ''
+  - ''
   - t: ▽
     type: trans
   - t: ▽
@@ -352,10 +345,12 @@ layers:
     type: trans
   - t: ▽
     type: trans
-  - ⇧⏎
+  - t: новий рядок
+    h: ⇧⏎
   - t: ▽
     type: trans
-  - type: held
+  - t: ▽
+    type: trans
   - t: ▽
     type: trans
   - t: ▽
@@ -386,10 +381,10 @@ layers:
     h: ⌃↑
   - ''
   - ⌦
-  - 🖱L
-  - 🖱↑
-  - 🖱R
-  - ⇞ скрол
+  - ''
+  - ''
+  - ''
+  - ''
   - ''
   - ''
   - t: емодзі
@@ -401,10 +396,10 @@ layers:
     h: ⌃↓
   - ''
   - ⌫
-  - 🖱←
-  - 🖱↓
-  - 🖱→
-  - ⇟ скрол
+  - ''
+  - ''
+  - ''
+  - ''
   - ''
   - ''
   - ''
@@ -429,7 +424,7 @@ layers:
   - type: held
   - ''
   - ''
-  - type: held
+  - ''
   - ''
   - ''
   - ''
@@ -561,6 +556,237 @@ layers:
   - ''
   - ''
   - ⇧
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  select:
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: до початку
+    h: ⇧⌘↑
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: до поч. рядка
+    h: ⇧⌘←
+  - t: виділ. ↑
+    h: ⇧↑
+  - t: до кін. рядка
+    h: ⇧⌘→
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: виділ. ←
+    h: ⇧←
+  - t: виділ. ↓
+    h: ⇧↓
+  - t: виділ. →
+    h: ⇧→
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: виділ. слово
+    h: ⌥← ⇧⌥→
+  - t: слово ←
+    h: ⇧⌥←
+  - t: до кінця
+    h: ⇧⌘↓
+  - t: слово →
+    h: ⇧⌥→
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  mouse:
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - ⇞ скрол
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - 🖱L
+  - 🖱↑
+  - 🖱R
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - 🖱←
+  - 🖱↓
+  - 🖱→
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - 🖱M
+  - ⇠ скрол
+  - ⇟ скрол
+  - ⇢ скрол
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
   - t: ▽
     type: trans
   - t: ▽
