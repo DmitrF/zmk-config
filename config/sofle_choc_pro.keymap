@@ -18,11 +18,12 @@
 #define RU 2
 #define PUNKT 3
 #define NAV 4
-#define SYS 5
-#define SERVICE 6
-#define TYPO 7
-#define SEL 8
-#define MOUSE 9
+#define SEL 5
+#define MOUSE 6
+#define SYS 7
+#define SERVICE 8
+#define TYPO 9
+#define WIN 10
 
 / {
     // Activate sys layer by holding punkt and nav together
@@ -199,7 +200,7 @@
                 <&macro_release>,
                 <&mo 4>,
                 <&macro_tap>,
-                <&tog_off 5 &tog_off 6>;
+                <&tog_off 5 &tog_off 6 &tog_off 10>;
 
             label = "NAV_KEY";
         };
@@ -209,7 +210,7 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <10>;
-            bindings = <&tog_off 6 &tog 5>;
+            bindings = <&tog_off 6 &tog_off 10 &tog 5>;
             label = "SEL_FLIP";
         };
 
@@ -218,8 +219,17 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <10>;
-            bindings = <&tog_off 5 &tog 6>;
+            bindings = <&tog_off 5 &tog_off 10 &tog 6>;
             label = "MOUSE_FLIP";
+        };
+
+        win_flip: win_flip {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <10>;
+            bindings = <&tog_off 5 &tog_off 6 &tog 10>;
+            label = "WIN_FLIP";
         };
 
         to_ua: to_ua {
@@ -266,6 +276,16 @@
             label = "NAV_SEL";
             #binding-cells = <2>;
             bindings = <&mo>, <&sel_flip>;
+
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+        };
+
+        nav_win: nav_win {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NAV_WIN";
+            #binding-cells = <2>;
+            bindings = <&mo>, <&win_flip>;
 
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
@@ -401,7 +421,7 @@
             display-name = "nav";
             bindings = <
 &none  &none      &none         &none      &none                    &none                                                                &kp RG(BACKSPACE)  &none               &kp LA(UP)    &none          &none         &kp HOME
-&none  &none      &none         &none      &none                    &none           &kp DEL                                                                 &kp LG(LEFT)        &kp UP        &kp LG(RIGHT)  &kp LG(UP)    &kp PAGE_UP
+&none  &none      &nav_win 10 0         &none      &none                    &none           &kp DEL                                                                 &kp LG(LEFT)        &kp UP        &kp LG(RIGHT)  &kp LG(UP)    &kp PAGE_UP
 &none  &kp LG(A)  &nav_sel 5 0  &none      &none                    &nav_mouse 6 0  &kp BACKSPACE                                                           &kp LEFT            &kp DOWN      &kp RIGHT      &kp RG(DOWN)  &kp PAGE_DOWN
 &none  &kp LG(Z)  &kp LG(X)     &kp LG(C)  &mt LG(LS(LA(V))) LG(V)  &kp LG(LS(Z))   &kp LS(LG(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &kp LA(BACKSPACE)  &kp LA(LEFT_ARROW)  &kp LA(DOWN)  &kp LA(RIGHT)  &none         &kp END
                   &trans        &trans     &trans                   &trans          &kp LS(ENTER)             &trans                     &trans             &trans              &trans        &trans
@@ -460,6 +480,17 @@
 &none           &kp SQT  &kp SEMI   &kp L      &kp K           &kp LA(MINUS)      &kp LS(LA(MINUS))                         &none                 &none                     &none              &kp LA(N6)             &kp LA(EQUAL)
 &kp LEFT_SHIFT  &none    &none      &none      &none           &kp LS(LA(EQUAL))  &trans             &trans  &none          &kp LA(SEMICOLON)     &none                     &none              &none                  &kp RIGHT_SHIFT
                          &trans     &trans     &trans          &trans             &trans             &trans  &trans         &trans                &trans                    &trans
+            >;
+        };
+
+        window {
+            display-name = "window";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans         &trans             &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &kp LC(LA(U))  &kp LC(LA(I))      &kp LC(LA(O))    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &kp LC(LA(J))  &kp LC(LA(K))      &kp LC(LA(L))    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LC(LA(M))  &kp LC(LA(COMMA))  &kp LC(LA(DOT))  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans             &trans
             >;
         };
     };

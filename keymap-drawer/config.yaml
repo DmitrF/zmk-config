@@ -64,7 +64,7 @@ parse_config:
     "&kp C_VOL_UP": "🔊"
     # punkt
     "&eur_usd DOLLAR LS(LA(N2))": {t: "€", h: "$"}
-    "&mo 7": "typo"
+    "&mo 9": "typo"
     # typo: Option combos on the U.S. layout
     "&kp LA(J)": "∆"
     "&kp LA(X)": "≈"
@@ -100,8 +100,8 @@ parse_config:
     "&kp LC(LG(Q))": {t: "lock", h: "⌃⌘Q"}
     # nav, select, mouse: combos as text, keys underneath
     "&nav_key": "nav"
-    "&nav_sel SEL 0": {t: "виділення", h: "тап / утрим."}
-    "&nav_mouse MOUSE 0": {t: "миша", h: "тап / утрим."}
+    "&nav_sel 5 0": {t: "виділення", h: "тап / утрим."}
+    "&nav_mouse 6 0": {t: "миша", h: "тап / утрим."}
     "&kp LG(UP)": {t: "на початок", h: "⌘↑"}
     "&kp LG(DOWN)": {t: "в кінець", h: "⌘↓"}
     "&kp RG(BACKSPACE)": {t: "стерти до поч.", h: "⌘⌫"}
@@ -129,5 +129,30 @@ parse_config:
     "&msc SCRL_RIGHT": "⇢ скрол"
     "&kp RIGHT_GUI": "⌘"
     "&kp RGUI": "⌘"
+    "&nav_win 10 0": {t: "вікна", h: "тап / утрим."}
+    "&mo 8": "service"
+    "&select_line": {t: "виділ. рядок", h: "⌘← ⇧⌘→"}
+    "&kp LG(A)": {t: "виділ. все", h: "⌘A"}
+    "&mt LG(LS(LA(V))) LG(V)": {t: "paste", h: "⌘V · утрим. без форм."}
+    "&kp LA(UP)": {t: "абзац ↑", h: "⌥↑"}
+    "&kp LA(DOWN)": {t: "абзац ↓", h: "⌥↓"}
+    "&kp RG(DOWN)": {t: "в кінець", h: "⌘↓"}
+    "&kp LS(LG(LEFT_BRACKET))": {t: "← вкладка", h: "⇧⌘["}
+    "&kp LS(LG(RIGHT_BRACKET))": {t: "вкладка →", h: "⇧⌘]"}
+    "&kp HOME": "Home"
+    "&kp END": "End"
+    "&kp PAGE_UP": "PgUp"
+    "&kp PAGE_DOWN": "PgDn"
+    "&kp LC(C)": {t: "перервати", h: "⌃C"}
+    # window: window manager hotkeys (Ctrl+Option + key)
+    "&kp LC(LA(U))": {t: "↖ чверть", h: "⌃⌥U"}
+    "&kp LC(LA(I))": {t: "верх ½", h: "⌃⌥I"}
+    "&kp LC(LA(O))": {t: "↗ чверть", h: "⌃⌥O"}
+    "&kp LC(LA(J))": {t: "ліва ½", h: "⌃⌥J"}
+    "&kp LC(LA(K))": {t: "весь екран", h: "⌃⌥K"}
+    "&kp LC(LA(L))": {t: "права ½", h: "⌃⌥L"}
+    "&kp LC(LA(M))": {t: "↙ чверть", h: "⌃⌥M"}
+    "&kp LC(LA(COMMA))": {t: "низ ½", h: "⌃⌥,"}
+    "&kp LC(LA(DOT))": {t: "↘ чверть", h: "⌃⌥."}
 draw_config:
   footer_text: "Sofle Choc Pro · ua/ru: підписи як у розкладках macOS Ukrainian-PC / Russian-PC"

@@ -19,3 +19,7 @@ MacBook's built-in keyboard (vendor 1452, product 834) behave like the Sofle
 H ⌫, Y ⌦, U/O line start/end, ESDF/WR/XV selection, Q select word, N delete line).
 These rules only apply to the built-in keyboard, so the Sofle's own ⌘ shortcuts
 are left alone.
+
+The Sofle `nav` layer has since been reworked (select, mouse and window
+sub-layers), so these MacBook rules still follow the older layout; syncing them
+is an open task in [`docs/plan.md`](docs/plan.md).
