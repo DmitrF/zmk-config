@@ -281,13 +281,15 @@ layers:
   - t: стерти до поч.
     h: ⌘⌫
   - ''
-  - Alt+UP
+  - t: абзац ↑
+    h: ⌥↑
   - ''
   - ''
-  - HOME
+  - Home
   - ''
   - ''
-  - ''
+  - t: вікна
+    h: тап / утрим.
   - ''
   - ''
   - ''
@@ -299,21 +301,23 @@ layers:
     h: ⌘→
   - t: на початок
     h: ⌘↑
-  - PAGE UP
+  - PgUp
   - ''
-  - Gui+A
-  - t: '&sel_flip'
-    h: select
+  - t: виділ. все
+    h: ⌘A
+  - t: виділення
+    h: тап / утрим.
   - ''
   - ''
-  - t: '&mouse_flip'
-    h: mouse
+  - t: миша
+    h: тап / утрим.
   - ⌫
   - ←
   - ↓
   - →
-  - Gui+DOWN
-  - PAGE DOWN
+  - t: в кінець
+    h: ⌘↓
+  - PgDn
   - ''
   - t: undo
     h: ⌘Z
@@ -322,20 +326,23 @@ layers:
   - t: copy
     h: ⌘C
   - t: paste
-    h: Gui+Sft+Alt+V
+    h: ⌘V · утрим. без форм.
   - t: redo
     h: ⌘⇧Z
-  - Sft+Gui+[
-  - Sft+Gui+]
+  - t: ← вкладка
+    h: ⇧⌘[
+  - t: вкладка →
+    h: ⇧⌘]
   - t: стерти слово
     h: ⌥⌫
   - t: слово ←
     h: ⌥←
-  - Alt+DOWN
+  - t: абзац ↓
+    h: ⌥↓
   - t: слово →
     h: ⌥→
   - ''
-  - END
+  - End
   - t: ▽
     type: trans
   - t: ▽
@@ -375,7 +382,8 @@ layers:
     h: ⌥← ⇧⌥→
   - t: до початку
     h: ⇧⌘↑
-  - '&select_line'
+  - t: виділ. рядок
+    h: ⌘← ⇧⌘→
   - ''
   - t: ▽
     type: trans
@@ -407,7 +415,8 @@ layers:
     type: trans
   - t: ▽
     type: trans
-  - type: held
+  - t: ▽
+    type: trans
   - t: ▽
     type: trans
   - t: ▽
@@ -524,7 +533,8 @@ layers:
     type: trans
   - t: ▽
     type: trans
-  - type: held
+  - t: ▽
+    type: trans
   - t: ▽
     type: trans
   - 🖱←
@@ -626,7 +636,8 @@ layers:
   - ''
   - ''
   - ''
-  - Ctl+C
+  - t: перервати
+    h: ⌃C
   - ''
   - ''
   - ''
@@ -703,7 +714,7 @@ layers:
   - ''
   - ''
   - ''
-  - type: held
+  - ''
   - ''
   - ''
   - ''
@@ -745,7 +756,8 @@ layers:
   - ''
   - «
   - »
-  - type: held
+  - t: ▽
+    type: trans
   - ''
   - ''''
   - ;
@@ -780,7 +792,129 @@ layers:
     type: trans
   - t: ▽
     type: trans
-  - type: held
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  window:
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ↖ чверть
+    h: ⌃⌥U
+  - t: верх ½
+    h: ⌃⌥I
+  - t: ↗ чверть
+    h: ⌃⌥O
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ліва ½
+    h: ⌃⌥J
+  - t: весь екран
+    h: ⌃⌥K
+  - t: права ½
+    h: ⌃⌥L
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ↙ чверть
+    h: ⌃⌥M
+  - t: низ ½
+    h: ⌃⌥,
+  - t: ↘ чверть
+    h: ⌃⌥.
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
   - t: ▽
     type: trans
   - t: ▽
