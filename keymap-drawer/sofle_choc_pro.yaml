@@ -278,14 +278,13 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - t: на початок
-    h: ⌘↑
-  - ''
-  - ''
   - t: стерти до поч.
     h: ⌘⌫
+  - ''
+  - Alt+UP
+  - ''
+  - ''
+  - HOME
   - ''
   - ''
   - ''
@@ -298,22 +297,23 @@ layers:
   - ↑
   - t: кін. рядка
     h: ⌘→
+  - t: на початок
+    h: ⌘↑
+  - PAGE UP
+  - ''
+  - Gui+A
+  - t: '&sel_flip'
+    h: select
   - ''
   - ''
-  - ''
-  - ''
-  - t: виділення
-    h: тап / утрим.
-  - ''
-  - ''
-  - t: миша
-    h: тап / утрим.
+  - t: '&mouse_flip'
+    h: mouse
   - ⌫
   - ←
   - ↓
   - →
-  - ''
-  - ''
+  - Gui+DOWN
+  - PAGE DOWN
   - ''
   - t: undo
     h: ⌘Z
@@ -322,21 +322,20 @@ layers:
   - t: copy
     h: ⌘C
   - t: paste
-    h: ⌘V
+    h: Gui+Sft+Alt+V
   - t: redo
     h: ⌘⇧Z
-  - ''
-  - ''
+  - Sft+Gui+[
+  - Sft+Gui+]
   - t: стерти слово
     h: ⌥⌫
   - t: слово ←
     h: ⌥←
-  - t: в кінець
-    h: ⌘↓
+  - Alt+DOWN
   - t: слово →
     h: ⌥→
   - ''
-  - ''
+  - END
   - t: ▽
     type: trans
   - t: ▽
@@ -347,6 +346,227 @@ layers:
     type: trans
   - t: новий рядок
     h: ⇧⏎
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  select:
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: виділ. слово
+    h: ⌥← ⇧⌥→
+  - t: до початку
+    h: ⇧⌘↑
+  - '&select_line'
+  - ''
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: до поч. рядка
+    h: ⇧⌘←
+  - t: виділ. ↑
+    h: ⇧↑
+  - t: до кін. рядка
+    h: ⇧⌘→
+  - t: до початку
+    h: ⇧⌘↑
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - type: held
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: виділ. ←
+    h: ⇧←
+  - t: виділ. ↓
+    h: ⇧↓
+  - t: виділ. →
+    h: ⇧→
+  - t: до кінця
+    h: ⇧⌘↓
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: слово ←
+    h: ⇧⌥←
+  - t: до кінця
+    h: ⇧⌘↓
+  - t: слово →
+    h: ⇧⌥→
+  - ''
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  mouse:
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - 🖱M
+  - ''
+  - ''
+  - ''
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - 🖱L
+  - 🖱↑
+  - 🖱R
+  - ⇞ скрол
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - type: held
+  - t: ▽
+    type: trans
+  - 🖱←
+  - 🖱↓
+  - 🖱→
+  - ⇟ скрол
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - ⇠ скрол
+  - ''
+  - ⇢ скрол
+  - ''
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
+  - t: ▽
+    type: trans
   - t: ▽
     type: trans
   - t: ▽
@@ -384,7 +604,8 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - t: →EN
+    h: мова
   - ''
   - ''
   - t: емодзі
@@ -399,25 +620,24 @@ layers:
   - ''
   - ''
   - ''
+  - t: →UA
+    h: мова
   - ''
   - ''
   - ''
   - ''
-  - ''
-  - ''
+  - Ctl+C
   - ''
   - ''
   - ''
   - service
-  - t: →EN
-    h: мова
-  - t: →UA
-    h: мова
+  - ''
+  - ''
+  - ''
+  - ''
   - t: →RU
     h: мова
-  - ''
-  - ⇪
-  - ''
+  - ⇧
   - ''
   - ''
   - ''
@@ -448,8 +668,7 @@ layers:
     h: мова
   - ''
   - ⇪
-  - t: →EN
-    h: мова
+  - ''
   - EP TOG
   - RGB HUD
   - RGB HUI
@@ -457,10 +676,10 @@ layers:
   - RGB SAI
   - RGB EFF
   - ⌦
-  - 🖱L
-  - 🖱↑
-  - 🖱R
-  - ⇞ скрол
+  - ''
+  - ''
+  - ''
+  - ''
   - ''
   - t: reset
     h: перезап.
@@ -468,12 +687,12 @@ layers:
   - RGB BRI
   - ''
   - ''
-  - ''
+  - RGB TOG
   - ⌫
-  - 🖱←
-  - 🖱↓
-  - 🖱→
-  - ⇟ скрол
+  - ''
+  - ''
+  - ''
+  - ''
   - t: reset
     h: перезап.
   - t: boot
@@ -483,7 +702,7 @@ layers:
   - ''
   - ''
   - ''
-  - RGB TOG
+  - ''
   - type: held
   - ''
   - ''
@@ -526,8 +745,7 @@ layers:
   - ''
   - «
   - »
-  - t: ▽
-    type: trans
+  - type: held
   - ''
   - ''''
   - ;
@@ -562,239 +780,7 @@ layers:
     type: trans
   - t: ▽
     type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  select:
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: до початку
-    h: ⇧⌘↑
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: до поч. рядка
-    h: ⇧⌘←
-  - t: виділ. ↑
-    h: ⇧↑
-  - t: до кін. рядка
-    h: ⇧⌘→
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: виділ. ←
-    h: ⇧←
-  - t: виділ. ↓
-    h: ⇧↓
-  - t: виділ. →
-    h: ⇧→
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: виділ. слово
-    h: ⌥← ⇧⌥→
-  - t: слово ←
-    h: ⇧⌥←
-  - t: до кінця
-    h: ⇧⌘↓
-  - t: слово →
-    h: ⇧⌥→
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  mouse:
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - ⇞ скрол
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - 🖱L
-  - 🖱↑
-  - 🖱R
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - 🖱←
-  - 🖱↓
-  - 🖱→
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - 🖱M
-  - ⇠ скрол
-  - ⇟ скрол
-  - ⇢ скрол
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
-  - t: ▽
-    type: trans
+  - type: held
   - t: ▽
     type: trans
   - t: ▽
